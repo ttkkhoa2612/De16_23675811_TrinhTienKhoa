@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Workflow for deploying static content to GitHub Pages with library setup
+name: Deploy static content to Pages with Libraries
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,13 +31,53 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          
+      - name: Install and configure libraries
+        run: |
+          # Tạo package.json
+          npm init -y
+          
+          # Cài đặt thư viện
+          npm install bootstrap@5.2.3 jquery@3.6.0 @fortawesome/fontawesome-free@6.4.0 owl.carousel@2.3.4 aos@2.3.1
+          
+          # Tạo cấu trúc thư mục
+          mkdir -p libs/bootstrap/css libs/bootstrap/js
+          mkdir -p libs/jquery
+          mkdir -p libs/fontawesome/css libs/fontawesome/webfonts
+          mkdir -p libs/owl-carousel
+          mkdir -p libs/aos
+          
+          # Sao chép các file
+          cp node_modules/bootstrap/dist/css/bootstrap.min.css libs/bootstrap/css/
+          cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js libs/bootstrap/js/
+          cp node_modules/jquery/dist/jquery.min.js libs/jquery/
+          cp node_modules/@fortawesome/fontawesome-free/css/all.min.css libs/fontawesome/css/
+          cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* libs/fontawesome/webfonts/
+          cp node_modules/owl.carousel/dist/owl.carousel.min.js libs/owl-carousel/
+          cp node_modules/owl.carousel/dist/assets/owl.carousel.min.css libs/owl-carousel/
+          cp node_modules/owl.carousel/dist/assets/owl.theme.default.min.css libs/owl-carousel/
+          cp node_modules/aos/dist/aos.js libs/aos/
+          cp node_modules/aos/dist/aos.css libs/aos/
+          
+          # Hiển thị cấu trúc thư mục để kiểm tra
+          echo "--- Cấu trúc thư mục sau khi cài đặt ---"
+          ls -la libs
+          echo "--------------------------------------"
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
