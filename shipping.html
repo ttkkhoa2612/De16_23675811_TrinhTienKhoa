@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách vận chuyển - KidZone</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-contact">
+                        <span class="me-3"><i class="fas fa-phone-alt me-2"></i>028-1234-5678</span>
+                        <span><i class="fas fa-envelope me-2"></i>info@kidzone.vn</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-links">
+                        <a href="#" id="orderCheckLink" class="me-3"><i class="fas fa-box me-1"></i>Kiểm tra đơn hàng</a>
+                        <a href="#" id="findStoreLink"><i class="fas fa-map-marker-alt me-1"></i>Tìm cửa hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
+                    <div class="logo">
+                        <h1><a href="index.html">Kid<span>Zone</span></a></h1>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="search-box position-relative">
+                        <form action="#" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm đồ chơi..." id="searchInput">
+                                <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                        <!-- Trending search results dropdown -->
+                        <div class="trending-search-results">
+                            <h6>Đồ chơi được tìm kiếm nhiều nhất</h6>
+                            <div class="trending-item">
+                                <img src="products/trending-1.jpg" alt="Trending toy">
+                                <div class="trending-info">
+                                    <h5>Bộ xếp hình thông minh</h5>
+                                    <p>Đã bán: 245 | Lượt xem: 1.2k</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="products/trending-2.jpg" alt="Trending toy">
+                                <div class="trending-info">
+                                    <h5>Xe điều khiển từ xa</h5>
+                                    <p>Đã bán: 189 | Lượt xem: 980</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="products/trending-3.jpg" alt="Trending toy">
+                                <div class="trending-info">
+                                    <h5>Búp bê thời trang</h5>
+                                    <p>Đã bán: 156 | Lượt xem: 850</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6 text-end">
+                    <div class="header-actions d-flex align-items-center justify-content-end">
+                        <div class="dropdown account-dropdown me-3">
+                            <button class="btn" type="button" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                            </button>
+                            <div class="dropdown-menu account-menu" aria-labelledby="accountDropdown">
+                                <h5 class="dropdown-header">Tài khoản</h5>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Đơn hàng của tôi</a>
+                                <a class="dropdown-item" href="#">Sản phẩm yêu thích</a>
+                            </div>
+                        </div>
+                        <div class="dropdown cart-dropdown me-3">
+                            <button class="btn" type="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge cart-count">2</span>
+                            </button>
+                            <div class="dropdown-menu cart-menu" aria-labelledby="cartDropdown">
+                                <h5 class="dropdown-header">Giỏ hàng (2 sản phẩm)</h5>
+                                <div class="cart-items">
+                                    <div class="cart-item">
+                                        <img src="products/product-1.jpg" alt="Product">
+                                        <div class="cart-item-details">
+                                            <h6>Bộ xếp hình thông minh</h6>
+                                            <p>350.000₫ x 1</p>
+                                        </div>
+                                        <button class="btn-remove"><i class="fas fa-times"></i></button>
+                                    </div>
+                                    <div class="cart-item">
+                                        <img src="products/product-2.jpg" alt="Product">
+                                        <div class="cart-item-details">
+                                            <h6>Xe điều khiển từ xa</h6>
+                                            <p>450.000₫ x 1</p>
+                                        </div>
+                                        <button class="btn-remove"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <div class="cart-summary">
+                                    <p>Tạm tính: <span class="fw-bold">800.000₫</span></p>
+                                </div>
+                                <div class="cart-actions">
+                                    <a href="cart.html" class="btn btn-outline-primary">Xem giỏ hàng</a>
+                                    <a href="checkout.html" class="btn btn-primary">Thanh toán</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn d-lg-none" id="mobileSearchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 d-lg-none">
+                <div class="col-12 collapse" id="mobileSearchForm">
+                    <div class="search-box">
+                        <form action="#" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm đồ chơi...">
+                                <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Danh mục
+                            </a>
+                            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown1">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5 class="menu-header">Theo lứa tuổi</h5>
+                                            <ul class="list-unstyled">
+                                                <li><a href="category.html">Đồ chơi 0-1 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 1-3 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 3-5 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 5-7 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 7-12 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi trên 12 tuổi</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h5 class="menu-header">Theo loại</h5>
+                                            <ul class="list-unstyled">
+                                                <li><a href="category-educational.html">Đồ chơi giáo dục</a></li>
+                                                <li><a href="category-active.html">Đồ chơi vận động</a></li>
+                                                <li><a href="category-creative.html">Đồ chơi sáng tạo</a></li>
+                                                <li><a href="category-building.html">Đồ chơi xếp hình</a></li>
+                                                <li><a href="category-electronic.html">Đồ chơi điện tử</a></li>
+                                                <li><a href="category-sports.html">Đồ chơi thể thao</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h5 class="menu-header">Theo thương hiệu</h5>
+                                            <ul class="list-unstyled">
+                                                <li><a href="brand.html">LEGO</a></li>
+                                                <li><a href="brand.html">Fisher-Price</a></li>
+                                                <li><a href="brand.html">Barbie</a></li>
+                                                <li><a href="brand.html">Hot Wheels</a></li>
+                                                <li><a href="brand.html">Nerf</a></li>
+                                                <li><a href="brand.html">Play-Doh</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="menu-promo">
+                                                <img src="menu-promo.jpg" alt="Promo">
+                                                <div class="menu-promo-content">
+                                                    <h5>Giảm đến 30%</h5>
+                                                    <p>Cho đồ chơi giáo dục STEM</p>
+                                                    <a href="promotion.html" class="btn btn-primary btn-sm">Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="promotion.html">Khuyến mãi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <div class="nav-contact d-none d-lg-flex align-items-center">
+                        <i class="fas fa-headset me-2"></i>
+                        <div>
+                            <small>Hỗ trợ 24/7</small>
+                            <p class="mb-0">028-1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">Chính sách vận chuyển</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Chính sách vận chuyển</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="shipping-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="support-menu bg-white rounded shadow-sm p-4">
+                        <h4 class="mb-4">Hỗ trợ khách hàng</h4>
+                        <ul class="list-unstyled support-links">
+                            <li><a href="guide.html"><i class="fas fa-shopping-cart me-2"></i>Hướng dẫn mua hàng</a></li>
+                            <li class="active"><a href="shipping.html"><i class="fas fa-truck me-2"></i>Chính sách vận chuyển</a></li>
+                            <li><a href="returns.html"><i class="fas fa-exchange-alt me-2"></i>Chính sách đổi trả</a></li>
+                            <li><a href="warranty.html"><i class="fas fa-shield-alt me-2"></i>Chính sách bảo hành</a></li>
+                            <li><a href="payment.html"><i class="fas fa-credit-card me-2"></i>Phương thức thanh toán</a></li>
+                            <li><a href="faq.html"><i class="fas fa-question-circle me-2"></i>Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="shipping-content bg-white rounded shadow-sm p-4">
+                        <h2 class="shipping-title mb-4">Chính sách vận chuyển KidZone</h2>
+                        <p class="shipping-desc">KidZone luôn nỗ lực cung cấp dịch vụ vận chuyển nhanh chóng, an toàn và đáng tin cậy để đảm bảo bé yêu của bạn sẽ nhận được đồ chơi trong thời gian sớm nhất. Dưới đây là các thông tin chi tiết về chính sách vận chuyển của chúng tôi.</p>
+
+                        <div class="shipping-info mt-5">
+                            <div class="info-item mb-5" data-aos="fade-up">
+                                <h3><i class="fas fa-truck-loading me-3 text-primary"></i>Phạm vi vận chuyển</h3>
+                                <div class="content-box p-4 bg-light rounded mt-3">
+                                    <p>KidZone hiện cung cấp dịch vụ vận chuyển đến tất cả các tỉnh thành trên toàn quốc. Đối với các khu vực đảo xa, miền núi hoặc vùng sâu vùng xa, thời gian giao hàng có thể kéo dài hơn và phí vận chuyển có thể cao hơn.</p>
+                                    
+                                    <div class="table-responsive mt-3">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Khu vực</th>
+                                                    <th>Phạm vi</th>
+                                                    <th>Thời gian vận chuyển</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Khu vực 1</td>
+                                                    <td>Nội thành TP.HCM, Hà Nội</td>
+                                                    <td>1-2 ngày làm việc</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Khu vực 2</td>
+                                                    <td>Các thành phố lớn (Đà Nẵng, Cần Thơ, Hải Phòng...)</td>
+                                                    <td>2-3 ngày làm việc</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Khu vực 3</td>
+                                                    <td>Các tỉnh thành khác</td>
+                                                    <td>3-5 ngày làm việc</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Khu vực 4</td>
+                                                    <td>Vùng sâu, vùng xa, hải đảo</td>
+                                                    <td>5-7 ngày làm việc</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-5" data-aos="fade-up" data-aos-delay="100">
+                                <h3><i class="fas fa-money-bill-wave me-3 text-primary"></i>Phí vận chuyển</h3>
+                                <div class="content-box p-4 bg-light rounded mt-3">
+                                    <p>Phí vận chuyển được tính dựa trên khoảng cách, trọng lượng và kích thước của sản phẩm. KidZone áp dụng chính sách miễn phí vận chuyển cho các đơn hàng trên 500.000₫ đối với khu vực 1 và 2.</p>
+                                    
+                                    <div class="table-responsive mt-3">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Khu vực</th>
+                                                    <th>Đơn hàng dưới 500.000₫</th>
+                                                    <th>Đơn hàng từ 500.000₫ đến 1.000.000₫</th>
+                                                    <th>Đơn hàng trên 1.000.000₫</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Khu vực 1</td>
+                                                    <td>30.000₫</td>
+                                                    <td>Miễn phí</td>
+                                                    <td>Miễn phí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Khu vực 2</td>
+                                                    <td>40.000₫</td>
+                                                    <td>Miễn phí</td>
+                                                    <td>Miễn phí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Khu vực 3</td>
+                                                    <td>50.000₫</td>
+                                                    <td>30.000₫</td>
+                                                    <td>Miễn phí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Khu vực 4</td>
+                                                    <td>70.000₫</td>
+                                                    <td>50.000₫</td>
+                                                    <td>30.000₫</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="shipping-notes mt-3">
+                                        <p><strong>Lưu ý:</strong></p>
+                                        <ul>
+                                            <li>Phí vận chuyển sẽ được tính và hiển thị trong quá trình thanh toán</li>
+                                            <li>Đối với sản phẩm cồng kềnh hoặc nặng (trên 10kg), có thể phát sinh thêm phí vận chuyển</li>
+                                            <li>Trong một số trường hợp đặc biệt, phí vận chuyển có thể thay đổi tùy theo quy định của đơn vị vận chuyển</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-5" data-aos="fade-up" data-aos-delay="200">
+                                <h3><i class="fas fa-dolly me-3 text-primary"></i>Phương thức vận chuyển</h3>
+                                <div class="content-box p-4 bg-light rounded mt-3">
+                                    <p>KidZone hợp tác với nhiều đơn vị vận chuyển uy tín để đảm bảo hàng hóa đến tay khách hàng an toàn và đúng hẹn:</p>
+                                    
+                                    <div class="shipping-partners mt-3">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-3 col-6 mb-3">
+                                                <div class="partner-item text-center">
+                                                    <img src="shipping/ghn.png" alt="Giao hàng nhanh" class="img-fluid">
+                                                    <h5 class="mt-2">Giao Hàng Nhanh</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-6 mb-3">
+                                                <div class="partner-item text-center">
+                                                    <img src="shipping/ghtk.png" alt="Giao hàng tiết kiệm" class="img-fluid">
+                                                    <h5 class="mt-2">Giao Hàng Tiết Kiệm</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-6 mb-3">
+                                                <div class="partner-item text-center">
+                                                    <img src="shipping/jt.png" alt="J&T Express" class="img-fluid">
+                                                    <h5 class="mt-2">J&T Express</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-6 mb-3">
+                                                <div class="partner-item text-center">
+                                                    <img src="shipping/vnpost.png" alt="VN Post" class="img-fluid">
+                                                    <h5 class="mt-2">VN Post</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="mt-3">Tùy vào địa chỉ giao hàng và tính chất sản phẩm, chúng tôi sẽ lựa chọn đơn vị vận chuyển phù hợp nhất. Quý khách cũng có thể yêu cầu đơn vị vận chuyển ưa thích (nếu có) trong quá trình đặt hàng.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-5" data-aos="fade-up" data-aos-delay="300">
+                                <h3><i class="fas fa-clock me-3 text-primary"></i>Thời gian xử lý đơn hàng</h3>
+                                <div class="content-box p-4 bg-light rounded mt-3">
+                                    <p>Thời gian xử lý đơn hàng tại KidZone như sau:</p>
+                                    <ul>
+                                        <li><strong>Đơn hàng thông thường:</strong> Trong vòng 24 giờ làm việc sau khi đặt hàng</li>
+                                        <li><strong>Đơn hàng đặt trước (Pre-order):</strong> Theo thời gian quy định cụ thể của từng sản phẩm</li>
+                                        <li><strong>Đơn hàng trong dịp cao điểm (Giáng sinh, Tết, Black Friday...):</strong> Có thể kéo dài 24-48 giờ làm việc</li>
+                                    </ul>
+                                    
+                                    <div class="timeline mt-4">
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-primary"></div>
+                                            <div class="timeline-content">
+                                                <h5>Đặt hàng</h5>
+                                                <p>Khách hàng đặt hàng trên website hoặc qua hotline</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-primary"></div>
+                                            <div class="timeline-content">
+                                                <h5>Xác nhận đơn hàng</h5>
+                                                <p>Nhân viên kiểm tra và xác nhận đơn hàng qua điện thoại hoặc email</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-primary"></div>
+                                            <div class="timeline-content">
+                                                <h5>Đóng gói</h5>
+                                                <p>Đơn hàng được đóng gói cẩn thận, an toàn</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-primary"></div>
+                                            <div class="timeline-content">
+                                                <h5>Bàn giao vận chuyển</h5>
+                                                <p>Đơn hàng được bàn giao cho đơn vị vận chuyển</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-success"></div>
+                                            <div class="timeline-content">
+                                                <h5>Giao hàng</h5>
+                                                <p>Đơn hàng được giao đến địa chỉ khách hàng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-5" data-aos="fade-up" data-aos-delay="400">
+                                <h3><i class="fas fa-box-open me-3 text-primary"></i>Quy trình đóng gói sản phẩm</h3>
+                                <div class="content-box p-4 bg-light rounded mt-3">
+                                    <p>KidZone đặc biệt chú trọng đến quy trình đóng gói để đảm bảo sản phẩm đến tay khách hàng nguyên vẹn, không bị hư hỏng trong quá trình vận chuyển:</p>
+                                    
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><i class="fas fa-check-circle text-success me-2"></i>Vật liệu đóng gói</h5>
+                                                    <ul class="card-text">
+                                                        <li>Hộp carton chất lượng cao, chịu lực tốt</li>
+                                                        <li>Lớp xốp bọc chống sốc cho sản phẩm dễ vỡ</li>
+                                                        <li>Giấy chống sốc và túi khí bảo vệ các chi tiết nhỏ</li>
+                                                        <li>Băng keo chất lượng cao, chống thấm nước</li>
+                                                        <li>Tem niêm phong để đảm bảo hàng hóa không bị mở trong quá trình vận chuyển</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><i class="fas fa-shield-alt text-success me-2"></i>Quy trình kiểm tra</h5>
+                                                    <ul class="card-text">
+                                                        <li>Kiểm tra sản phẩm trước khi đóng gói để đảm bảo không có lỗi</li>
+                                                        <li>Đối chiếu thông tin sản phẩm với đơn hàng</li>
+                                                        <li>Chụp ảnh sản phẩm trước khi đóng gói (đối với sản phẩm giá trị cao)</li>
+                                                        <li>Kiểm tra chất lượng đóng gói trước khi bàn giao cho đơn vị vận chuyển</li>
+                                                        <li>Theo dõi tình trạng hàng hóa trong quá trình vận chuyển</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><i class="fas fa-leaf text-success me-2"></i>Chính sách đóng gói thân thiện với môi trường</h5>
+                                                    <p class="card-text">KidZone cam kết sử dụng các vật liệu đóng gói thân thiện với môi trường, có thể tái chế hoặc phân hủy sinh học. Chúng tôi khuyến khích khách hàng tái sử dụng hoặc tái chế các vật liệu đóng gói sau khi nhận hàng.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-5" data-aos="fade-up" data-aos-delay="500">
+                                <h3><i class="fas fa-search-location me-3 text-primary"></i>Theo dõi đơn hàng</h3>
+                                <div class="content-box p-4 bg-light rounded mt-3">
+                                    <p>KidZone cung cấp nhiều cách để khách hàng theo dõi trạng thái đơn hàng của mình:</p>
+                                    
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="tracking-method p-3 border rounded h-100">
+                                                <h5><i class="fas fa-user me-2 text-primary"></i>Theo dõi qua tài khoản</h5>
+                                                <p>Đăng nhập vào tài khoản KidZone của bạn, vào mục "Đơn hàng của tôi" để xem trạng thái đơn hàng.</p>
+                                                <a href="#" class="btn btn-sm btn-outline-primary">Đăng nhập ngay</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="tracking-method p-3 border rounded h-100">
+                                                <h5><i class="fas fa-link me-2 text-primary"></i>Theo dõi qua liên kết</h5>
+                                                <p>Sử dụng đường link theo dõi đơn hàng được gửi qua email xác nhận đơn hàng.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="tracking-method p-3 border rounded h-100">
+                                                <h5><i class="fas fa-sms me-2 text-primary"></i>Theo dõi qua SMS</h5>
+                                                <p>Bạn sẽ nhận được các tin nhắn SMS thông báo khi đơn hàng được xử lý, vận chuyển và giao thành công.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="tracking-method p-3 border rounded h-100">
+                                                <h5><i class="fas fa-phone-alt me-2 text-primary"></i>Gọi hỗ trợ</h5>
+                                                <p>Gọi số hotline 028-1234-5678 để được nhân viên hỗ trợ kiểm tra trạng thái đơn hàng.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tracking-form mt-4">
+                                        <h5>Tra cứu đơn hàng</h5>
+                                        <form>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Nhập mã đơn hàng">
+                                                <button class="btn btn-primary" type="button">Tra cứu</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item" data-aos="fade-up" data-aos-delay="600">
+                                <h3><i class="fas fa-exclamation-triangle me-3 text-primary"></i>Lưu ý quan trọng</h3>
+                                <div class="content-box p-4 bg-light rounded mt-3">
+                                    <div class="alert alert-warning">
+                                        <h5><i class="fas fa-info-circle me-2"></i>Kiểm tra hàng khi nhận</h5>
+                                        <p>Quý khách vui lòng kiểm tra kỹ tình trạng bên ngoài của kiện hàng trước khi ký nhận. Nếu phát hiện dấu hiệu hư hỏng, móp méo bên ngoài, vui lòng ghi chú trong biên bản giao nhận hoặc từ chối nhận hàng và liên hệ ngay với KidZone để được hỗ trợ.</p>
+                                    </div>
+                                    
+                                    <h5 class="mt-4">Các trường hợp đặc biệt:</h5>
+                                    <ul>
+                                        <li><strong>Không nhận được hàng:</strong> Nếu theo dõi đơn hàng hiển thị đã giao nhưng bạn không nhận được hàng, vui lòng liên hệ ngay với chúng tôi.</li>
+                                        <li><strong>Nhận sai hàng:</strong> Nếu nhận được sản phẩm không đúng với đơn đặt hàng, hãy chụp ảnh và liên hệ với chúng tôi trong vòng 24 giờ.</li>
+                                        <li><strong>Hàng bị hư hỏng:</strong> Nếu sản phẩm bị hư hỏng trong quá trình vận chuyển, vui lòng chụp ảnh và liên hệ với chúng tôi trong vòng 24 giờ.</li>
+                                    </ul>
+                                    
+                                    <div class="mt-4">
+                                        <h5>Thông tin liên hệ hỗ trợ vận chuyển:</h5>
+                                        <ul>
+                                            <li><strong>Hotline:</strong> 028-1234-5678 (8:00 - 20:00, từ Thứ 2 - Chủ nhật)</li>
+                                            <li><strong>Email:</strong> shipping@kidzone.vn</li>
+                                            <li><strong>Chat trực tuyến:</strong> Trên website KidZone</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-section mt-5" data-aos="fade-up">
+                            <h3 class="mb-4">Câu hỏi thường gặp về vận chuyển</h3>
+                            <div class="accordion" id="shippingFAQ">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Làm sao để tôi biết đơn hàng đã được giao đi chưa?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#shippingFAQ">
+                                        <div class="accordion-body">
+                                            Khi đơn hàng của bạn được giao đi, chúng tôi sẽ gửi email hoặc tin nhắn SMS thông báo kèm theo mã vận đơn để bạn có thể theo dõi hành trình của đơn hàng. Bạn cũng có thể kiểm tra trạng thái đơn hàng bằng cách đăng nhập vào tài khoản KidZone và vào mục "Đơn hàng của tôi".
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Tôi có thể thay đổi địa chỉ giao hàng sau khi đã đặt hàng không?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#shippingFAQ">
+                                        <div class="accordion-body">
+                                            Bạn có thể thay đổi địa chỉ giao hàng nếu đơn hàng chưa được xử lý. Vui lòng liên hệ với bộ phận Chăm sóc Khách hàng của chúng tôi qua hotline 028-1234-5678 hoặc email info@kidzone.vn càng sớm càng tốt. Nếu đơn hàng đã được giao cho đơn vị vận chuyển, việc thay đổi địa chỉ có thể không khả thi hoặc phát sinh thêm phí.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            KidZone có giao hàng vào cuối tuần và ngày lễ không?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#shippingFAQ">
+                                        <div class="accordion-body">
+                                            Có, KidZone vẫn giao hàng vào cuối tuần tại một số khu vực tùy thuộc vào chính sách của đơn vị vận chuyển tại địa phương của bạn. Tuy nhiên, trong các dịp lễ lớn (như Tết Nguyên đán), dịch vụ vận chuyển có thể bị gián đoạn hoặc kéo dài hơn so với thông thường. Chúng tôi sẽ thông báo trước cho khách hàng về lịch giao hàng trong các dịp đặc biệt này.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Tôi có thể chọn thời gian giao hàng cụ thể không?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#shippingFAQ">
+                                        <div class="accordion-body">
+                                            Hiện tại, KidZone chưa cung cấp dịch vụ chọn thời gian giao hàng cụ thể. Tuy nhiên, sau khi đơn hàng được giao cho đơn vị vận chuyển, shipper sẽ liên hệ với bạn trước khi giao hàng để xác nhận thời gian phù hợp. Nếu bạn có yêu cầu đặc biệt về thời gian giao hàng, vui lòng ghi chú trong đơn hàng hoặc liên hệ trực tiếp với chúng tôi, chúng tôi sẽ cố gắng sắp xếp phù hợp nhất.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            Làm thế nào để tôi được miễn phí vận chuyển?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#shippingFAQ">
+                                        <div class="accordion-body">
+                                            KidZone áp dụng miễn phí vận chuyển cho các đơn hàng có giá trị từ 500.000₫ trở lên đối với khu vực nội thành TP.HCM, Hà Nội và các thành phố lớn. Đối với các khu vực khác, miễn phí vận chuyển được áp dụng cho đơn hàng từ 1.000.000₫. Ngoài ra, chúng tôi thường xuyên có các chương trình khuyến mãi miễn phí vận chuyển trong các dịp đặc biệt, vui lòng theo dõi website hoặc fanpage KidZone để không bỏ lỡ các ưu đãi này.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-support mt-5 text-center p-4 bg-primary rounded text-white" data-aos="fade-up">
+                            <h3>Bạn cần hỗ trợ thêm về vận chuyển?</h3>
+                            <p>Đội ngũ Chăm sóc Khách hàng của chúng tôi luôn sẵn sàng giúp đỡ bạn</p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="contact.html" class="btn btn-light">Liên hệ ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-logo">
+                        <h2>Kid<span>Zone</span></h2>
+                    </div>
+                    <p class="mb-4">KidZone - Cung cấp đồ chơi an toàn, giáo dục và thú vị cho sự phát triển toàn diện của trẻ em.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="mb-0">123 Nguyễn Văn A, Quận 1, TP.HCM</p>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-phone-alt"></i>
+                            <p class="mb-0">028-1234-5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="mb-0">info@kidzone.vn</p>
+                        </div>
+                    </div>
+                    <div class="footer-social mt-4">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Danh mục</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="category-educational.html">Đồ chơi giáo dục</a></li>
+                        <li><a href="category-active.html">Đồ chơi vận động</a></li>
+                        <li><a href="category-creative.html">Đồ chơi sáng tạo</a></li>
+                        <li><a href="category-building.html">Đồ chơi xếp hình</a></li>
+                        <li><a href="category-boys.html">Đồ chơi cho bé trai</a></li>
+                        <li><a href="category-girls.html">Đồ chơi cho bé gái</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Liên kết</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="promotion.html">Khuyến mãi</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="checkout.html">Đặt hàng</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-heading">Hỗ trợ khách hàng</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="guide.html">Hướng dẫn mua hàng</a></li>
+                        <li><a href="shipping.html">Chính sách vận chuyển</a></li>
+                        <li><a href="returns.html">Chính sách đổi trả</a></li>
+                        <li><a href="warranty.html">Chính sách bảo hành</a></li>
+                        <li><a href="payment.html">Phương thức thanh toán</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 mt-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">© 2023 KidZone. Tất cả quyền được bảo lưu.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <div class="payment-methods">
+                            <span>Chấp nhận thanh toán:</span>
+                            <img src="payment/visa.png" alt="Visa">
+                            <img src="payment/mastercard.png" alt="Mastercard">
+                            <img src="payment/momo.png" alt="MoMo">
+                            <img src="payment/zalopay.png" alt="ZaloPay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Nhập email của bạn">
+                            <div class="invalid-feedback" id="errorLoginEmail"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu">
+                            <div class="invalid-feedback" id="errorLoginPassword"></div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="btnLogin">Đăng nhập</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Quên mật khẩu?</a>
+                    </div>
+                    <div class="social-login mt-4">
+                        <p class="text-center mb-3">Hoặc đăng nhập với</p>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-outline-primary me-2"><i class="fab fa-facebook-f me-2"></i>Facebook</button>
+                            <button class="btn btn-outline-danger"><i class="fab fa-google me-2"></i>Google</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Chưa có tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Đăng ký tài khoản</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Họ tên</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="Nhập họ tên của bạn">
+                            <div class="invalid-feedback" id="errorRegisterName"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Nhập email của bạn">
+                            <div class="invalid-feedback" id="errorRegisterEmail"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPhone" class="form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" id="registerPhone" placeholder="Nhập số điện thoại">
+                            <div class="invalid-feedback" id="errorRegisterPhone"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Nhập mật khẩu">
+                            <div class="invalid-feedback" id="errorRegisterPassword"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Nhập lại mật khẩu">
+                            <div class="invalid-feedback" id="errorRegisterConfirmPassword"></div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms">
+                            <label class="form-check-label" for="agreeTerms">Tôi đồng ý với các <a href="terms.html">điều khoản</a> và <a href="privacy.html">chính sách bảo mật</a></label>
+                            <div class="text-danger small" id="errorAgree"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="btnRegister">Đăng ký</button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Đã có tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Find Store Modal -->
+    <div class="modal fade" id="findStoreModal" tabindex="-1" aria-labelledby="findStoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="findStoreModalLabel">Tìm cửa hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="form-group">
+                                <label for="storeCity" class="form-label">Tỉnh/Thành phố</label>
+                                <select class="form-select" id="storeCity">
+                                    <option value="">Chọn tỉnh/thành phố</option>
+                                    <option value="hcm">TP. Hồ Chí Minh</option>
+                                    <option value="hanoi">Hà Nội</option>
+                                    <option value="danang">Đà Nẵng</option>
+                                    <option value="cantho">Cần Thơ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="storeDistrict" class="form-label">Quận/Huyện</label>
+                                <select class="form-select" id="storeDistrict">
+                                    <option value="">Chọn quận/huyện</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="storeMap" style="width: 100%; height: 400px; border-radius: 10px;"></div>
+                    <div class="store-list mt-4">
+                        <h6>Danh sách cửa hàng:</h6>
+                        <div class="store-item p-3 border rounded mb-2">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="mb-1">KidZone Nguyễn Văn A</h5>
+                                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>123 Nguyễn Văn A, Quận 1, TP.HCM</p>
+                                    <p class="mb-1"><i class="fas fa-phone-alt me-2"></i>028-1234-5678</p>
+                                    <p class="mb-0"><i class="fas fa-clock me-2"></i>8:00 - 20:00 (Thứ 2 - Chủ nhật)</p>
+                                </div>
+                                <button class="btn btn-primary align-self-center view-on-map" data-lat="10.7769" data-lng="106.7009">Xem trên bản đồ</button>
+                            </div>
+                        </div>
+                        <div class="store-item p-3 border rounded mb-2">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="mb-1">KidZone Nguyễn Văn B</h5>
+                                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>456 Nguyễn Văn B, Quận 3, TP.HCM</p>
+                                    <p class="mb-1"><i class="fas fa-phone-alt me-2"></i>028-8765-4321</p>
+                                    <p class="mb-0"><i class="fas fa-clock me-2"></i>8:00 - 20:00 (Thứ 2 - Chủ nhật)</p>
+                                </div>
+                                <button class="btn btn-primary align-self-center view-on-map" data-lat="10.7868" data-lng="106.6830">Xem trên bản đồ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Check Modal -->
+    <div class="modal fade" id="orderCheckModal" tabindex="-1" aria-labelledby="orderCheckModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderCheckModalLabel">Kiểm tra đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderCheckForm">
+                        <div class="mb-3">
+                            <label for="orderNumber" class="form-label">Mã đơn hàng</label>
+                            <input type="text" class="form-control" id="orderNumber" placeholder="Ví dụ: KZ12345">
+                            <div class="invalid-feedback" id="errorOrderNumber"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderEmail" class="form-label">Email đặt hàng</label>
+                            <input type="email" class="form-control" id="orderEmail" placeholder="Nhập email bạn đã dùng để đặt hàng">
+                            <div class="invalid-feedback" id="errorOrderEmail"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="btnCheckOrder">Kiểm tra</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Điều khoản và điều kiện</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>1. Điều khoản chung</h4>
+                    <p>Khi sử dụng dịch vụ của KidZone, bạn đồng ý tuân theo các điều khoản và điều kiện được quy định.</p>
+                    
+                    <h4>2. Sản phẩm và giá cả</h4>
+                    <p>KidZone cam kết cung cấp thông tin chính xác về sản phẩm và giá cả. Tuy nhiên, có thể có sai sót về thông tin sản phẩm, giá cả hoặc khuyến mãi.</p>
+                    
+                    <h4>3. Đặt hàng và thanh toán</h4>
+                    <p>Khi đặt hàng, khách hàng phải cung cấp thông tin chính xác và đầy đủ. KidZone chấp nhận nhiều phương thức thanh toán khác nhau.</p>
+                    
+                    <h4>4. Giao hàng và đổi trả</h4>
+                    <p>KidZone sẽ giao hàng trong thời gian cam kết. Khách hàng có quyền đổi trả trong vòng 7 ngày nếu sản phẩm có lỗi.</p>
+                    
+                    <h4>5. Bảo mật thông tin</h4>
+                    <p>KidZone cam kết bảo vệ thông tin cá nhân của khách hàng theo chính sách bảo mật của công ty.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickViewModalLabel">Xem nhanh sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <img src="products/product-1.jpg" alt="Product" id="quickViewImage" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="quickViewTitle">Bộ xếp hình thông minh</h3>
+                            <div class="product-rating mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(28)</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <span class="old-price" id="quickViewOldPrice">420.000₫</span>
+                                <span class="new-price" id="quickViewPrice">350.000₫</span>
+                            </div>
+                            <p class="mb-4">Bộ xếp hình thông minh giúp phát triển tư duy logic và sáng tạo cho bé từ 3-6 tuổi. Bộ sản phẩm bao gồm 100 chi tiết với nhiều hình dạng và màu sắc khác nhau.</p>
+                            <div class="product-meta mb-4">
+                                <p><strong>Mã sản phẩm:</strong> KZ-XH-001</p>
+                                <p><strong>Danh mục:</strong> Đồ chơi giáo dục</p>
+                                <p><strong>Độ tuổi phù hợp:</strong> 3-6 tuổi</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="input-group me-3" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary" type="button" id="decreaseQtyModal"><i class="fas fa-minus"></i></button>
+                                    <input type="number" class="form-control text-center" id="quantityModal" value="1" min="1">
+                                    <button class="btn btn-outline-secondary" type="button" id="increaseQtyModal"><i class="fas fa-plus"></i></button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-labelledby="orderSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-5">
+                    <i class="fas fa-check-circle success-icon mb-4"></i>
+                    <h3 class="mb-3">Đặt hàng thành công!</h3>
+                    <p class="mb-4">Cảm ơn bạn đã đặt hàng tại KidZone!</p>
+                    <h5 class="mb-4">Mã đơn hàng của bạn là: <span id="orderNumberDisplay" class="text-primary">KZ12345</span></h5>
+                    <p>Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <a href="products.html" class="btn btn-primary">Tiếp tục mua sắm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="file.js"></script>
+</body>
+</html>

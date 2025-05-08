@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách bảo hành - KidZone</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-contact">
+                        <span class="me-3"><i class="fas fa-phone-alt me-2"></i>028-1234-5678</span>
+                        <span><i class="fas fa-envelope me-2"></i>info@kidzone.vn</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-links">
+                        <a href="#" id="orderCheckLink" class="me-3"><i class="fas fa-box me-1"></i>Kiểm tra đơn hàng</a>
+                        <a href="#" id="findStoreLink"><i class="fas fa-map-marker-alt me-1"></i>Tìm cửa hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
+                    <div class="logo">
+                        <h1><a href="index.html">Kid<span>Zone</span></a></h1>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="search-box position-relative">
+                        <form action="#" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm đồ chơi..." id="searchInput">
+                                <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                        <!-- Trending search results dropdown -->
+                        <div class="trending-search-results">
+                            <h6>Đồ chơi được tìm kiếm nhiều nhất</h6>
+                            <div class="trending-item">
+                                <img src="products/trending-1.jpg" alt="Trending toy">
+                                <div class="trending-info">
+                                    <h5>Bộ xếp hình thông minh</h5>
+                                    <p>Đã bán: 245 | Lượt xem: 1.2k</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="products/trending-2.jpg" alt="Trending toy">
+                                <div class="trending-info">
+                                    <h5>Xe điều khiển từ xa</h5>
+                                    <p>Đã bán: 189 | Lượt xem: 980</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="products/trending-3.jpg" alt="Trending toy">
+                                <div class="trending-info">
+                                    <h5>Búp bê thời trang</h5>
+                                    <p>Đã bán: 156 | Lượt xem: 850</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6 text-end">
+                    <div class="header-actions d-flex align-items-center justify-content-end">
+                        <div class="dropdown account-dropdown me-3">
+                            <button class="btn" type="button" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                            </button>
+                            <div class="dropdown-menu account-menu" aria-labelledby="accountDropdown">
+                                <h5 class="dropdown-header">Tài khoản</h5>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Đơn hàng của tôi</a>
+                                <a class="dropdown-item" href="#">Sản phẩm yêu thích</a>
+                            </div>
+                        </div>
+                        <div class="dropdown cart-dropdown me-3">
+                            <button class="btn" type="button" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge cart-count">2</span>
+                            </button>
+                            <div class="dropdown-menu cart-menu" aria-labelledby="cartDropdown">
+                                <h5 class="dropdown-header">Giỏ hàng (2 sản phẩm)</h5>
+                                <div class="cart-items">
+                                    <div class="cart-item">
+                                        <img src="products/product-1.jpg" alt="Product">
+                                        <div class="cart-item-details">
+                                            <h6>Bộ xếp hình thông minh</h6>
+                                            <p>350.000₫ x 1</p>
+                                        </div>
+                                        <button class="btn-remove"><i class="fas fa-times"></i></button>
+                                    </div>
+                                    <div class="cart-item">
+                                        <img src="products/product-2.jpg" alt="Product">
+                                        <div class="cart-item-details">
+                                            <h6>Xe điều khiển từ xa</h6>
+                                            <p>450.000₫ x 1</p>
+                                        </div>
+                                        <button class="btn-remove"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <div class="cart-summary">
+                                    <p>Tạm tính: <span class="fw-bold">800.000₫</span></p>
+                                </div>
+                                <div class="cart-actions">
+                                    <a href="cart.html" class="btn btn-outline-primary">Xem giỏ hàng</a>
+                                    <a href="checkout.html" class="btn btn-primary">Thanh toán</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn d-lg-none" id="mobileSearchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 d-lg-none">
+                <div class="col-12 collapse" id="mobileSearchForm">
+                    <div class="search-box">
+                        <form action="#" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm đồ chơi...">
+                                <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Danh mục
+                            </a>
+                            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown1">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5 class="menu-header">Theo lứa tuổi</h5>
+                                            <ul class="list-unstyled">
+                                                <li><a href="category.html">Đồ chơi 0-1 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 1-3 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 3-5 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 5-7 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi 7-12 tuổi</a></li>
+                                                <li><a href="category.html">Đồ chơi trên 12 tuổi</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h5 class="menu-header">Theo loại</h5>
+                                            <ul class="list-unstyled">
+                                                <li><a href="category-educational.html">Đồ chơi giáo dục</a></li>
+                                                <li><a href="category-active.html">Đồ chơi vận động</a></li>
+                                                <li><a href="category-creative.html">Đồ chơi sáng tạo</a></li>
+                                                <li><a href="category-building.html">Đồ chơi xếp hình</a></li>
+                                                <li><a href="category-electronic.html">Đồ chơi điện tử</a></li>
+                                                <li><a href="category-sports.html">Đồ chơi thể thao</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h5 class="menu-header">Theo thương hiệu</h5>
+                                            <ul class="list-unstyled">
+                                                <li><a href="brand.html">LEGO</a></li>
+                                                <li><a href="brand.html">Fisher-Price</a></li>
+                                                <li><a href="brand.html">Barbie</a></li>
+                                                <li><a href="brand.html">Hot Wheels</a></li>
+                                                <li><a href="brand.html">Nerf</a></li>
+                                                <li><a href="brand.html">Play-Doh</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="menu-promo">
+                                                <img src="menu-promo.jpg" alt="Promo">
+                                                <div class="menu-promo-content">
+                                                    <h5>Giảm đến 30%</h5>
+                                                    <p>Cho đồ chơi giáo dục STEM</p>
+                                                    <a href="promotion.html" class="btn btn-primary btn-sm">Mua ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="promotion.html">Khuyến mãi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <div class="nav-contact d-none d-lg-flex align-items-center">
+                        <i class="fas fa-headset me-2"></i>
+                        <div>
+                            <small>Hỗ trợ 24/7</small>
+                            <p class="mb-0">028-1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <div class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">Chính sách bảo hành</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Chính sách bảo hành</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="warranty-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="support-menu bg-white rounded shadow-sm p-4">
+                        <h4 class="mb-4">Hỗ trợ khách hàng</h4>
+                        <ul class="list-unstyled support-links">
+                            <li><a href="guide.html"><i class="fas fa-shopping-cart me-2"></i>Hướng dẫn mua hàng</a></li>
+                            <li><a href="shipping.html"><i class="fas fa-truck me-2"></i>Chính sách vận chuyển</a></li>
+                            <li><a href="returns.html"><i class="fas fa-exchange-alt me-2"></i>Chính sách đổi trả</a></li>
+                            <li class="active"><a href="warranty.html"><i class="fas fa-shield-alt me-2"></i>Chính sách bảo hành</a></li>
+                            <li><a href="payment.html"><i class="fas fa-credit-card me-2"></i>Phương thức thanh toán</a></li>
+                            <li><a href="faq.html"><i class="fas fa-question-circle me-2"></i>Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="warranty-content bg-white rounded shadow-sm p-4">
+                        <h2 class="warranty-title mb-4">Chính sách bảo hành KidZone</h2>
+                        <p class="warranty-desc">KidZone mang đến dịch vụ bảo hành chuyên nghiệp, đảm bảo mọi sản phẩm đồ chơi chất lượng cao, an toàn và bền bỉ theo thời gian. Chúng tôi cung cấp các chế độ bảo hành rõ ràng, minh bạch, giúp quý khách an tâm khi mua sắm đồ chơi cho bé yêu của mình.</p>
+
+                        <div class="warranty-banner p-4 rounded my-4" style="background-image: url('warranty-banner.jpg'); background-size: cover; position: relative;" data-aos="fade-up">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); border-radius: 0.25rem;"></div>
+                            <div class="position-relative text-white text-center py-4">
+                                <h3 class="mb-3">Cam kết bảo hành của KidZone</h3>
+                                <p class="mb-0">Chúng tôi cam kết mang đến những sản phẩm chất lượng cao và dịch vụ hậu mãi tốt nhất cho khách hàng. Mỗi sản phẩm tại KidZone đều được bảo hành theo các điều kiện cụ thể, đảm bảo trẻ em có những trải nghiệm vui chơi an toàn và bền lâu.</p>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up">
+                            <h3><i class="fas fa-star me-3 text-primary"></i>Phạm vi bảo hành</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <p>Chính sách bảo hành của KidZone áp dụng cho tất cả các sản phẩm được mua trực tiếp từ cửa hàng KidZone hoặc website chính thức kidzone.vn. Tùy theo từng loại sản phẩm, chúng tôi có các chính sách bảo hành khác nhau:</p>
+                                
+                                <div class="row mt-4">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="warranty-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="warranty-icon bg-primary text-white rounded-circle me-3">
+                                                    <i class="fas fa-robot"></i>
+                                                </span>
+                                                <h5 class="mb-0">Đồ chơi điện tử và robot</h5>
+                                            </div>
+                                            <ul class="mb-0">
+                                                <li>Thời gian bảo hành: 12 tháng</li>
+                                                <li>Bảo hành các lỗi về điện, pin, mạch điều khiển</li>
+                                                <li>Bảo hành motor và các bộ phận chuyển động</li>
+                                                <li>Hỗ trợ cập nhật phần mềm (nếu có)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="warranty-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="warranty-icon bg-success text-white rounded-circle me-3">
+                                                    <i class="fas fa-car"></i>
+                                                </span>
+                                                <h5 class="mb-0">Đồ chơi vận động</h5>
+                                            </div>
+                                            <ul class="mb-0">
+                                                <li>Thời gian bảo hành: 6 tháng</li>
+                                                <li>Bảo hành khung và cấu trúc chính</li>
+                                                <li>Bảo hành các bộ phận chuyển động</li>
+                                                <li>Bảo hành bánh xe, dây đai, xích</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="warranty-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="warranty-icon bg-warning text-white rounded-circle me-3">
+                                                    <i class="fas fa-cubes"></i>
+                                                </span>
+                                                <h5 class="mb-0">Đồ chơi xếp hình và LEGO</h5>
+                                            </div>
+                                            <ul class="mb-0">
+                                                <li>Thời gian bảo hành: 3 tháng</li>
+                                                <li>Bảo hành về thiếu chi tiết khi mở hộp</li>
+                                                <li>Bảo hành về lỗi sản xuất (màu sắc, kích thước)</li>
+                                                <li>Hỗ trợ thay thế các chi tiết bị mất (có tính phí sau thời gian bảo hành)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="warranty-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="warranty-icon bg-info text-white rounded-circle me-3">
+                                                    <i class="fas fa-baby"></i>
+                                                </span>
+                                                <h5 class="mb-0">Đồ chơi cho trẻ sơ sinh</h5>
+                                            </div>
+                                            <ul class="mb-0">
+                                                <li>Thời gian bảo hành: 3 tháng</li>
+                                                <li>Bảo hành về chất liệu an toàn</li>
+                                                <li>Bảo hành về độ bền của màu sắc</li>
+                                                <li>Bảo hành về âm thanh và ánh sáng (nếu có)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="important-notes mt-4 alert alert-info">
+                                    <h5><i class="fas fa-info-circle me-2"></i>Lưu ý quan trọng</h5>
+                                    <p>Thời hạn bảo hành được tính từ ngày mua sản phẩm (theo hóa đơn) hoặc ngày giao hàng (đối với đơn hàng online). Để được bảo hành, quý khách cần xuất trình hóa đơn mua hàng hoặc phiếu bảo hành đi kèm với sản phẩm.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="100">
+                            <h3><i class="fas fa-tools me-3 text-primary"></i>Điều kiện bảo hành</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="condition-card h-100">
+                                            <div class="condition-header bg-success text-white p-3">
+                                                <h5 class="mb-0"><i class="fas fa-check-circle me-2"></i>Điều kiện được bảo hành</h5>
+                                            </div>
+                                            <div class="condition-body p-3">
+                                                <ul class="list-unstyled">
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sản phẩm còn trong thời hạn bảo hành</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sản phẩm bị lỗi kỹ thuật do nhà sản xuất</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tem, nhãn bảo hành còn nguyên vẹn</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Có hóa đơn mua hàng hoặc phiếu bảo hành</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sản phẩm không có dấu hiệu bị tác động bởi bên thứ ba</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sản phẩm được sử dụng đúng hướng dẫn của nhà sản xuất</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="condition-card h-100">
+                                            <div class="condition-header bg-danger text-white p-3">
+                                                <h5 class="mb-0"><i class="fas fa-times-circle me-2"></i>Điều kiện không được bảo hành</h5>
+                                            </div>
+                                            <div class="condition-body p-3">
+                                                <ul class="list-unstyled">
+                                                    <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Sản phẩm đã hết thời hạn bảo hành</li>
+                                                    <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Sản phẩm bị hư hỏng do lỗi người dùng</li>
+                                                    <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Sản phẩm bị rơi, va đập, ngấm nước, cháy nổ</li>
+                                                    <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Sản phẩm bị hư hỏng do thiên tai, lũ lụt, hỏa hoạn</li>
+                                                    <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Sản phẩm bị tháo rời, sửa chữa bởi bên thứ ba</li>
+                                                    <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Tem, nhãn bảo hành bị rách, mất hoặc không còn nguyên vẹn</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="condition-card">
+                                            <div class="condition-header bg-primary text-white p-3">
+                                                <h5 class="mb-0"><i class="fas fa-seedling me-2"></i>Điều kiện bảo hành đặc biệt</h5>
+                                            </div>
+                                            <div class="condition-body p-3">
+                                                <p>Một số dòng sản phẩm cao cấp tại KidZone được áp dụng các điều kiện bảo hành đặc biệt:</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h6><i class="fas fa-medal text-warning me-2"></i>Đồ chơi dòng Premium</h6>
+                                                        <ul>
+                                                            <li>Bảo hành lên đến 24 tháng</li>
+                                                            <li>Hỗ trợ 1 đổi 1 trong 30 ngày đầu tiên nếu phát sinh lỗi</li>
+                                                            <li>Cung cấp linh kiện thay thế miễn phí trong suốt thời gian bảo hành</li>
+                                                            <li>Hỗ trợ kỹ thuật 24/7 qua hotline riêng</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h6><i class="fas fa-star text-warning me-2"></i>Khách hàng thành viên VIP</h6>
+                                                        <ul>
+                                                            <li>Gia hạn bảo hành thêm 6 tháng cho mọi sản phẩm</li>
+                                                            <li>Dịch vụ bảo hành tận nhà (áp dụng tại TP.HCM và Hà Nội)</li>
+                                                            <li>Ưu tiên xử lý bảo hành trong vòng 24 giờ</li>
+                                                            <li>Giảm 30% phí sửa chữa đối với các trường hợp ngoài bảo hành</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="200">
+                            <h3><i class="fas fa-cogs me-3 text-primary"></i>Quy trình bảo hành</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="process-steps">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h5>Kiểm tra điều kiện bảo hành</h5>
+                                            <p>Quý khách vui lòng kiểm tra xem sản phẩm của mình có đáp ứng đủ điều kiện bảo hành không. Hãy chuẩn bị hóa đơn mua hàng, phiếu bảo hành và sản phẩm cần bảo hành.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h5>Liên hệ với KidZone</h5>
+                                            <p>Quý khách có thể lựa chọn một trong các phương thức sau để yêu cầu bảo hành:</p>
+                                            <ul>
+                                                <li><strong>Mang trực tiếp:</strong> Mang sản phẩm đến trực tiếp cửa hàng KidZone</li>
+                                                <li><strong>Gọi điện:</strong> Liên hệ Hotline 028-1234-5678 để được hướng dẫn</li>
+                                                <li><strong>Email:</strong> Gửi yêu cầu đến warranty@kidzone.vn kèm thông tin và hình ảnh sản phẩm</li>
+                                                <li><strong>Website:</strong> Đăng ký yêu cầu bảo hành online trên website KidZone</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h5>Kiểm tra và chẩn đoán</h5>
+                                            <p>Kỹ thuật viên của KidZone sẽ tiến hành kiểm tra và chẩn đoán các lỗi của sản phẩm. Quá trình này thường mất:</p>
+                                            <ul>
+                                                <li>1-3 ngày đối với đồ chơi đơn giản</li>
+                                                <li>3-7 ngày đối với đồ chơi điện tử phức tạp</li>
+                                            </ul>
+                                            <p>KidZone sẽ thông báo cho quý khách về tình trạng sản phẩm và phương án xử lý sau khi hoàn tất kiểm tra.</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h5>Sửa chữa hoặc thay thế</h5>
+                                            <p>Dựa trên kết quả kiểm tra, KidZone sẽ tiến hành:</p>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <h6 class="mt-2">Sửa chữa sản phẩm</h6>
+                                                    <ul>
+                                                        <li>Thay thế linh kiện hỏng</li>
+                                                        <li>Sửa chữa mạch điện</li>
+                                                        <li>Khắc phục lỗi phần mềm (nếu có)</li>
+                                                        <li>Khắc phục các vấn đề cơ khí</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h6 class="mt-2">Thay thế sản phẩm mới</h6>
+                                                    <ul>
+                                                        <li>Áp dụng khi không thể sửa chữa</li>
+                                                        <li>Áp dụng khi chi phí sửa chữa cao hơn giá trị sản phẩm</li>
+                                                        <li>Áp dụng với các sản phẩm dòng Premium</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h5>Giao trả sản phẩm</h5>
+                                            <p>Sau khi hoàn tất sửa chữa hoặc thay thế, KidZone sẽ liên hệ để giao trả sản phẩm cho quý khách:</p>
+                                            <ul>
+                                                <li>Quý khách có thể nhận sản phẩm tại cửa hàng</li>
+                                                <li>KidZone có thể gửi sản phẩm đến địa chỉ quý khách yêu cầu (có thể phát sinh phí vận chuyển)</li>
+                                                <li>Đối với khách VIP, chúng tôi cung cấp dịch vụ giao tận nhà miễn phí</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="300">
+                            <h3><i class="fas fa-rocket me-3 text-primary"></i>Dịch vụ bảo hành nâng cao</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <p>Ngoài dịch vụ bảo hành tiêu chuẩn, KidZone còn cung cấp các gói dịch vụ bảo hành nâng cao, giúp quý khách có thể yên tâm hơn khi sử dụng sản phẩm lâu dài:</p>
+                                
+                                <div class="row mt-4">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="premium-warranty border rounded h-100">
+                                            <div class="warranty-header bg-primary text-white p-3 text-center">
+                                                <h5 class="mb-0">Gói Bảo Hành Mở Rộng</h5>
+                                            </div>
+                                            <div class="warranty-body p-3">
+                                                <div class="warranty-price text-center mb-3">
+                                                    <p class="mb-0"><span class="fs-4 fw-bold">+10%</span> giá sản phẩm</p>
+                                                </div>
+                                                <ul class="warranty-features">
+                                                    <li>Gia hạn thời gian bảo hành thêm 12 tháng</li>
+                                                    <li>Mở rộng phạm vi bảo hành (bao gồm một số lỗi người dùng)</li>
+                                                    <li>Ưu tiên xử lý bảo hành trong vòng 48 giờ</li>
+                                                    <li>Hỗ trợ kỹ thuật qua điện thoại 24/7</li>
+                                                </ul>
+                                                <div class="text-center mt-3">
+                                                    <a href="#" class="btn btn-sm btn-primary">Tìm hiểu thêm</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="premium-warranty border rounded h-100">
+                                            <div class="warranty-header bg-warning text-dark p-3 text-center">
+                                                <h5 class="mb-0">Gói Bảo Hành Toàn Diện</h5>
+                                            </div>
+                                            <div class="warranty-body p-3">
+                                                <div class="warranty-price text-center mb-3">
+                                                    <p class="mb-0"><span class="fs-4 fw-bold">+15%</span> giá sản phẩm</p>
+                                                </div>
+                                                <ul class="warranty-features">
+                                                    <li>Gia hạn thời gian bảo hành thêm 18 tháng</li>
+                                                    <li>Bảo hành cả lỗi do người dùng (trừ các trường hợp cố ý)</li>
+                                                    <li>Dịch vụ sửa chữa tận nơi (khu vực nội thành)</li>
+                                                    <li>Hỗ trợ kỹ thuật qua điện thoại 24/7</li>
+                                                    <li>Hỗ trợ 1 đổi 1 trong 90 ngày đầu tiên nếu có lỗi</li>
+                                                </ul>
+                                                <div class="text-center mt-3">
+                                                    <a href="#" class="btn btn-sm btn-warning">Tìm hiểu thêm</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="premium-warranty border rounded h-100">
+                                            <div class="warranty-header bg-success text-white p-3 text-center">
+                                                <h5 class="mb-0">Gói Bảo Hành VIP</h5>
+                                            </div>
+                                            <div class="warranty-body p-3">
+                                                <div class="warranty-price text-center mb-3">
+                                                    <p class="mb-0"><span class="fs-4 fw-bold">+20%</span> giá sản phẩm</p>
+                                                </div>
+                                                <ul class="warranty-features">
+                                                    <li>Gia hạn thời gian bảo hành thêm 24 tháng</li>
+                                                    <li>Bảo hành mọi lỗi, kể cả lỗi người dùng</li>
+                                                    <li>Dịch vụ sửa chữa tận nơi 24/7</li>
+                                                    <li>Hỗ trợ 1 đổi 1 trong 12 tháng đầu tiên</li>
+                                                    <li>Cung cấp sản phẩm thay thế trong thời gian sửa chữa</li>
+                                                    <li>Hỗ trợ kỹ thuật ưu tiên 24/7</li>
+                                                </ul>
+                                                <div class="text-center mt-3">
+                                                    <a href="#" class="btn btn-sm btn-success">Tìm hiểu thêm</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="warranty-register mt-4 p-3 border rounded text-center">
+                                    <h5>Đăng ký gói bảo hành nâng cao</h5>
+                                    <p>Quý khách có thể đăng ký gói bảo hành nâng cao khi mua sản phẩm mới hoặc trong vòng 30 ngày kể từ ngày mua.</p>
+                                    <a href="#" class="btn btn-primary">Đăng ký ngay</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="400">
+                            <h3><i class="fas fa-file-alt me-3 text-primary"></i>Chính sách bảo hành theo nhà sản xuất</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <p>Ngoài chính sách bảo hành của KidZone, một số sản phẩm còn được hưởng chính sách bảo hành trực tiếp từ nhà sản xuất:</p>
+                                
+                                <div class="table-responsive mt-3">
+                                    <table class="table table-bordered">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th>Thương hiệu</th>
+                                                <th>Thời gian bảo hành</th>
+                                                <th>Phạm vi bảo hành</th>
+                                                <th>Liên hệ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="brands/lego.png" alt="LEGO" width="40" class="me-2">
+                                                        <span>LEGO</span>
+                                                    </div>
+                                                </td>
+                                                <td>24 tháng</td>
+                                                <td>Bảo hành sản xuất, thay thế chi tiết bị thiếu</td>
+                                                <td><a href="#">Trung tâm bảo hành</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="brands/fisher-price.png" alt="Fisher-Price" width="40" class="me-2">
+                                                        <span>Fisher-Price</span>
+                                                    </div>
+                                                </td>
+                                                <td>12 tháng</td>
+                                                <td>Bảo hành lỗi sản xuất, các bộ phận điện tử</td>
+                                                <td><a href="#">Trung tâm bảo hành</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="brands/vtech.png" alt="VTech" width="40" class="me-2">
+                                                        <span>VTech</span>
+                                                    </div>
+                                                </td>
+                                                <td>18 tháng</td>
+                                                <td>Bảo hành toàn diện các lỗi kỹ thuật, điện tử</td>
+                                                <td><a href="#">Trung tâm bảo hành</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="brands/mattel.png" alt="Mattel" width="40" class="me-2">
+                                                        <span>Mattel (Barbie, Hot Wheels)</span>
+                                                    </div>
+                                                </td>
+                                                <td>6 tháng</td>
+                                                <td>Bảo hành lỗi sản xuất, chức năng cơ bản</td>
+                                                <td><a href="#">Trung tâm bảo hành</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="warranty-notes mt-4 alert alert-warning">
+                                    <h5><i class="fas fa-info-circle me-2"></i>Lưu ý về bảo hành nhà sản xuất</h5>
+                                    <ul class="mb-0">
+                                        <li>Quý khách có thể chọn sử dụng dịch vụ bảo hành của KidZone hoặc trực tiếp từ nhà sản xuất</li>
+                                        <li>Đối với bảo hành nhà sản xuất, KidZone sẽ hỗ trợ khách hàng liên hệ và gửi sản phẩm đến trung tâm bảo hành chính hãng</li>
+                                        <li>Thời gian bảo hành có thể kéo dài hơn khi gửi trực tiếp đến nhà sản xuất</li>
+                                        <li>Một số thương hiệu chỉ bảo hành tại nước ngoài, KidZone sẽ hỗ trợ quy trình gửi đi và nhận lại</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="500">
+                            <h3><i class="fas fa-question-circle me-3 text-primary"></i>Câu hỏi thường gặp về bảo hành</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="accordion" id="warrantyFAQ">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                                Tôi có phải trả phí bảo hành không?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#warrantyFAQ">
+                                            <div class="accordion-body">
+                                                <p>Không, dịch vụ bảo hành trong thời hạn bảo hành và thuộc phạm vi bảo hành là hoàn toàn miễn phí. Tuy nhiên, quý khách có thể phát sinh một số chi phí như:</p>
+                                                <ul>
+                                                    <li>Chi phí vận chuyển khi gửi sản phẩm đến cửa hàng/trung tâm bảo hành (trừ gói bảo hành nâng cao)</li>
+                                                    <li>Chi phí sửa chữa đối với các lỗi không thuộc phạm vi bảo hành</li>
+                                                    <li>Chi phí thay thế các linh kiện đặc biệt không nằm trong chính sách bảo hành</li>
+                                                </ul>
+                                                <p>Đối với các trường hợp phát sinh chi phí, KidZone sẽ thông báo và được sự đồng ý của quý khách trước khi tiến hành sửa chữa.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                                Thời gian bảo hành có được gia hạn sau khi sửa chữa không?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#warrantyFAQ">
+                                            <div class="accordion-body">
+                                                <p>Có, thời gian bảo hành sẽ được gia hạn theo quy định sau:</p>
+                                                <ul>
+                                                    <li>Đối với linh kiện được thay thế: được bảo hành thêm 3 tháng kể từ ngày thay thế</li>
+                                                    <li>Đối với sản phẩm được sửa chữa: thời gian bảo hành vẫn tính từ thời điểm mua ban đầu, nhưng sẽ được cộng thêm thời gian sửa chữa (thời gian từ lúc gửi đến khi nhận lại sản phẩm)</li>
+                                                    <li>Đối với sản phẩm thay thế mới: thời gian bảo hành được tính lại từ đầu như một sản phẩm mới</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                                Tôi bị mất phiếu bảo hành thì có được bảo hành không?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#warrantyFAQ">
+                                            <div class="accordion-body">
+                                                <p>Trong trường hợp mất phiếu bảo hành, quý khách vẫn có thể được bảo hành nếu cung cấp được một trong các bằng chứng mua hàng sau:</p>
+                                                <ul>
+                                                    <li>Hóa đơn mua hàng (bản gốc hoặc bản sao, điện tử hoặc giấy)</li>
+                                                    <li>Email xác nhận đơn hàng (đối với mua hàng online)</li>
+                                                    <li>Thông tin trong hệ thống KidZone (nếu quý khách đã đăng ký thành viên hoặc cung cấp thông tin khi mua hàng)</li>
+                                                </ul>
+                                                <p>Nếu không có bất kỳ bằng chứng nào trên, chúng tôi vẫn sẽ cố gắng hỗ trợ dựa trên thông tin serial number (nếu có) hoặc các đặc điểm nhận dạng của sản phẩm, tuy nhiên thời gian xác minh có thể kéo dài hơn.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingFour">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                                Nếu sản phẩm không thể sửa chữa được thì sao?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#warrantyFAQ">
+                                            <div class="accordion-body">
+                                                <p>Trong trường hợp sản phẩm không thể sửa chữa được và thuộc diện bảo hành, KidZone sẽ thực hiện theo thứ tự ưu tiên sau:</p>
+                                                <ol>
+                                                    <li><strong>Thay thế sản phẩm mới cùng model:</strong> Nếu còn hàng, chúng tôi sẽ cung cấp cho quý khách sản phẩm mới tương tự</li>
+                                                    <li><strong>Thay thế sản phẩm tương đương:</strong> Nếu model cũ đã ngừng sản xuất, chúng tôi sẽ đề xuất sản phẩm tương đương hoặc cao cấp hơn</li>
+                                                    <li><strong>Hoàn tiền:</strong> Nếu không có sản phẩm thay thế phù hợp, chúng tôi sẽ hoàn lại tiền cho quý khách theo tỷ lệ khấu hao thời gian sử dụng</li>
+                                                </ol>
+                                                <p>Đối với gói bảo hành VIP, chúng tôi sẽ thay thế sản phẩm mới hoặc hoàn tiền 100% không tính khấu hao (trong thời hạn quy định).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingFive">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                                Làm thế nào để kiểm tra thời hạn bảo hành còn lại của sản phẩm?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#warrantyFAQ">
+                                            <div class="accordion-body">
+                                                <p>Quý khách có thể kiểm tra thời hạn bảo hành còn lại của sản phẩm bằng các cách sau:</p>
+                                                <ul>
+                                                    <li><strong>Trực tuyến:</strong> Đăng nhập vào tài khoản KidZone và kiểm tra trong mục "Sản phẩm đã mua"</li>
+                                                    <li><strong>Qua hotline:</strong> Gọi số 028-1234-5678 và cung cấp mã đơn hàng hoặc thông tin sản phẩm</li>
+                                                    <li><strong>Tại cửa hàng:</strong> Mang sản phẩm hoặc phiếu bảo hành đến cửa hàng KidZone gần nhất</li>
+                                                    <li><strong>Email:</strong> Gửi email đến warranty@kidzone.vn kèm theo thông tin sản phẩm</li>
+                                                </ul>
+                                                <p>Ngoài ra, nhiều sản phẩm cao cấp có thể kiểm tra trực tiếp thông qua website của nhà sản xuất bằng cách nhập số serial của sản phẩm.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warranty-form mt-5 p-4 bg-white rounded shadow-sm" data-aos="fade-up">
+                            <h3 class="mb-4">Đăng ký yêu cầu bảo hành</h3>
+                            <p class="mb-4">Quý khách vui lòng điền thông tin bên dưới để gửi yêu cầu bảo hành sản phẩm. Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.</p>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="warrantyName" class="form-label">Họ tên</label>
+                                        <input type="text" class="form-control" id="warrantyName" placeholder="Nhập họ tên của bạn">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="warrantyEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="warrantyEmail" placeholder="Nhập email của bạn">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="warrantyPhone" class="form-label">Số điện thoại</label>
+                                        <input type="text" class="form-control" id="warrantyPhone" placeholder="Nhập số điện thoại">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="warrantyOrderId" class="form-label">Mã đơn hàng hoặc số phiếu bảo hành</label>
+                                        <input type="text" class="form-control" id="warrantyOrderId" placeholder="Ví dụ: KZ12345 hoặc WR5678">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="warrantyProduct" class="form-label">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" id="warrantyProduct" placeholder="Nhập tên sản phẩm cần bảo hành">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="warrantyPurchaseDate" class="form-label">Ngày mua hàng</label>
+                                        <input type="date" class="form-control" id="warrantyPurchaseDate">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="warrantyIssueType" class="form-label">Loại lỗi</label>
+                                        <select class="form-select" id="warrantyIssueType">
+                                            <option value="">Chọn loại lỗi</option>
+                                            <option value="electronic">Lỗi điện tử/điện</option>
+                                            <option value="mechanical">Lỗi cơ khí/vật lý</option>
+                                            <option value="battery">Lỗi pin/nguồn</option>
+                                            <option value="software">Lỗi phần mềm</option>
+                                            <option value="sound">Lỗi âm thanh</option>
+                                            <option value="light">Lỗi đèn/hiển thị</option>
+                                            <option value="other">Lỗi khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="warrantyDescription" class="form-label">Mô tả chi tiết lỗi</label>
+                                    <textarea class="form-control" id="warrantyDescription" rows="4" placeholder="Mô tả chi tiết lỗi sản phẩm gặp phải"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="warrantyPhotos" class="form-label">Đính kèm hình ảnh/video (nếu có)</label>
+                                    <input type="file" class="form-control" id="warrantyPhotos" multiple>
+                                    <div class="form-text">Tối đa 5 file, mỗi file không quá 10MB</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Phương thức bảo hành mong muốn</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="warrantyMethod" id="warrantyAtStore" value="at-store" checked>
+                                        <label class="form-check-label" for="warrantyAtStore">
+                                            Mang đến cửa hàng
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="warrantyMethod" id="warrantyPickup" value="pickup">
+                                        <label class="form-check-label" for="warrantyPickup">
+                                            Yêu cầu nhân viên đến lấy (có thể phát sinh phí)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="warrantyMethod" id="warrantySendByMail" value="mail">
+                                        <label class="form-check-label" for="warrantySendByMail">
+                                            Gửi qua đường bưu điện
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Gửi yêu cầu</button>
+                            </form>
+                        </div>
+
+                        <div class="contact-support mt-5 text-center p-4 bg-primary rounded text-white" data-aos="fade-up">
+                            <h3>Cần hỗ trợ thêm về bảo hành?</h3>
+                            <p>Đội ngũ Chăm sóc Khách hàng của chúng tôi luôn sẵn sàng giúp đỡ bạn</p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="tel:02812345678" class="btn btn-light me-2"><i class="fas fa-phone-alt me-2"></i>028-1234-5678</a>
+                                <a href="mailto:warranty@kidzone.vn" class="btn btn-outline-light"><i class="fas fa-envelope me-2"></i>warranty@kidzone.vn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- (Giữ nguyên phần này từ index.html) -->
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Modals -->
+    <!-- (Giữ nguyên phần này từ index.html) -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="file.js"></script>
+</body>
+</html>
+Trang 5: Phương thức thanh toán (payment.html)
+Copy<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức thanh toán - KidZone</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar, Header, Navigation giống như các trang khác -->
+    
+    <!-- Page Header -->
+    <div class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">Phương thức thanh toán</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Phương thức thanh toán</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="payment-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="support-menu bg-white rounded shadow-sm p-4">
+                        <h4 class="mb-4">Hỗ trợ khách hàng</h4>
+                        <ul class="list-unstyled support-links">
+                            <li><a href="guide.html"><i class="fas fa-shopping-cart me-2"></i>Hướng dẫn mua hàng</a></li>
+                            <li><a href="shipping.html"><i class="fas fa-truck me-2"></i>Chính sách vận chuyển</a></li>
+                            <li><a href="returns.html"><i class="fas fa-exchange-alt me-2"></i>Chính sách đổi trả</a></li>
+                            <li><a href="warranty.html"><i class="fas fa-shield-alt me-2"></i>Chính sách bảo hành</a></li>
+                            <li class="active"><a href="payment.html"><i class="fas fa-credit-card me-2"></i>Phương thức thanh toán</a></li>
+                            <li><a href="faq.html"><i class="fas fa-question-circle me-2"></i>Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="payment-content bg-white rounded shadow-sm p-4">
+                        <h2 class="payment-title mb-4">Phương thức thanh toán tại KidZone</h2>
+                        <p class="payment-desc">KidZone cung cấp đa dạng phương thức thanh toán an toàn và thuận tiện, giúp quý khách dễ dàng mua sắm đồ chơi yêu thích cho bé. Chúng tôi liên tục cập nhật và tích hợp các giải pháp thanh toán hiện đại để mang đến trải nghiệm mua sắm tốt nhất.</p>
+
+                        <div class="payment-overview mt-5" data-aos="fade-up">
+                            <div class="payment-methods-wrapper p-4 bg-light rounded">
+                                <h3 class="text-center mb-4">Các phương thức thanh toán hiện có</h3>
+                                <div class="row text-center payment-methods-grid">
+                                    <div class="col-md-4 col-6 mb-4">
+                                        <div class="payment-method-card p-3 h-100 bg-white rounded">
+                                            <img src="payment/cash.png" alt="Tiền mặt" class="img-fluid payment-icon mb-3">
+                                            <h5>Tiền mặt</h5>
+                                            <p class="small text-muted mb-0">Thanh toán khi nhận hàng</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6 mb-4">
+                                        <div class="payment-method-card p-3 h-100 bg-white rounded">
+                                            <img src="payment/bank-transfer.png" alt="Chuyển khoản" class="img-fluid payment-icon mb-3">
+                                            <h5>Chuyển khoản</h5>
+                                            <p class="small text-muted mb-0">Qua ngân hàng nội địa</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6 mb-4">
+                                        <div class="payment-method-card p-3 h-100 bg-white rounded">
+                                            <img src="payment/credit-card.png" alt="Thẻ tín dụng" class="img-fluid payment-icon mb-3">
+                                            <h5>Thẻ tín dụng/ghi nợ</h5>
+                                            <p class="small text-muted mb-0">Visa, Mastercard, JCB</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6 mb-4">
+                                        <div class="payment-method-card p-3 h-100 bg-white rounded">
+                                            <img src="payment/momo.png" alt="MoMo" class="img-fluid payment-icon mb-3">
+                                            <h5>Ví MoMo</h5>
+                                            <p class="small text-muted mb-0">Thanh toán qua ví điện tử</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6 mb-4">
+                                        <div class="payment-method-card p-3 h-100 bg-white rounded">
+                                            <img src="payment/zalopay.png" alt="ZaloPay" class="img-fluid payment-icon mb-3">
+                                            <h5>ZaloPay</h5>
+                                            <p class="small text-muted mb-0">Thanh toán qua ví điện tử</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6 mb-4">
+                                        <div class="payment-method-card p-3 h-100 bg-white rounded">
+                                            <img src="payment/installment.png" alt="Trả góp" class="img-fluid payment-icon mb-3">
+                                            <h5>Trả góp 0%</h5>
+                                            <p class="small text-muted mb-0">Qua thẻ tín dụng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up">
+                            <h3><i class="fas fa-money-bill-wave me-3 text-primary"></i>Thanh toán tiền mặt (COD)</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 mb-3 mb-md-0 text-center">
+                                        <img src="payment/cod-illustration.jpg" alt="Thanh toán khi nhận hàng" class="img-fluid rounded" style="max-height: 200px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5>Thanh toán khi nhận hàng (Cash On Delivery)</h5>
+                                        <p>Quý khách chỉ cần thanh toán khi nhận được sản phẩm và kiểm tra hàng hóa. Đây là phương thức thanh toán đơn giản và phổ biến nhất tại KidZone.</p>
+                                        
+                                        <h6 class="mt-3">Ưu điểm:</h6>
+                                        <ul>
+                                            <li>Đơn giản, không cần thẻ ngân hàng hay tài khoản trực tuyến</li>
+                                            <li>Có thể kiểm tra hàng trước khi thanh toán</li>
+                                            <li>Không lo lắng về vấn đề bảo mật thông tin thẻ</li>
+                                            <li>Phù hợp với mọi đối tượng khách hàng</li>
+                                        </ul>
+                                        
+                                        <div class="alert alert-info mt-3">
+                                            <strong>Lưu ý:</strong> Khi nhận hàng, quý khách vui lòng kiểm tra kỹ sản phẩm trước khi thanh toán. Nếu phát hiện bất kỳ vấn đề nào, vui lòng liên hệ ngay với nhân viên giao hàng hoặc hotline của KidZone.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="100">
+                            <h3><i class="fas fa-university me-3 text-primary"></i>Chuyển khoản ngân hàng</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 mb-3 mb-md-0 text-center">
+                                        <img src="payment/bank-transfer-illustration.jpg" alt="Chuyển khoản ngân hàng" class="img-fluid rounded" style="max-height: 200px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5>Thanh toán qua chuyển khoản ngân hàng</h5>
+                                        <p>Quý khách có thể thanh toán bằng cách chuyển khoản trực tiếp đến tài khoản ngân hàng của KidZone. Đây là phương thức an toàn và tiện lợi, đặc biệt phù hợp cho đơn hàng có giá trị lớn.</p>
+                                        
+                                        <div class="bank-accounts mt-3 border rounded p-3">
+                                            <h6>Thông tin tài khoản:</h6>
+                                            <div class="row bank-list">
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="bank-item d-flex align-items-center">
+                                                        <img src="payment/vietcombank.png" alt="Vietcombank" width="40" class="me-2">
+                                                        <div>
+                                                            <p class="mb-0 fw-bold">Ngân hàng Vietcombank</p>
+                                                            <p class="mb-0">Số TK: 0123456789</p>
+                                                            <p class="mb-0">Chủ TK: Công ty TNHH KidZone</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="bank-item d-flex align-items-center">
+                                                        <img src="payment/techcombank.png" alt="Techcombank" width="40" class="me-2">
+                                                        <div>
+                                                            <p class="mb-0 fw-bold">Ngân hàng Techcombank</p>
+                                                            <p class="mb-0">Số TK: 0987654321</p>
+                                                            <p class="mb-0">Chủ TK: Công ty TNHH KidZone</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="bank-item d-flex align-items-center">
+                                                        <img src="payment/bidv.png" alt="BIDV" width="40" class="me-2">
+                                                        <div>
+                                                            <p class="mb-0 fw-bold">Ngân hàng BIDV</p>
+                                                            <p class="mb-0">Số TK: 1357924680</p>
+                                                            <p class="mb-0">Chủ TK: Công ty TNHH KidZone</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="bank-item d-flex align-items-center">
+                                                        <img src="payment/mbbank.png" alt="MB Bank" width="40" class="me-2">
+                                                        <div>
+                                                            <p class="mb-0 fw-bold">Ngân hàng MBBank</p>
+                                                            <p class="mb-0">Số TK: 2468013579</p>
+                                                            <p class="mb-0">Chủ TK: Công ty TNHH KidZone</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="transfer-instruction mt-3">
+                                            <h6>Hướng dẫn chuyển khoản:</h6>
+                                            <ol>
+                                                <li>Chuyển khoản đến một trong các tài khoản trên</li>
+                                                <li>Nội dung chuyển khoản: <strong>[Mã đơn hàng] [Họ tên]</strong></li>
+                                                <li>Xác nhận chuyển khoản bằng cách gửi hình ảnh biên lai chuyển khoản qua email, Zalo hoặc gọi hotline 028-1234-5678</li>
+                                                <li>Đơn hàng sẽ được xử lý sau khi KidZone xác nhận đã nhận được thanh toán</li>
+                                            </ol>
+                                        </div>
+                                        
+                                        <div class="alert alert-warning mt-3">
+                                            <strong>Lưu ý:</strong> Vui lòng kiểm tra kỹ thông tin chuyển khoản trước khi thực hiện. KidZone không chịu trách nhiệm nếu quý khách chuyển khoản sai thông tin.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="200">
+                            <h3><i class="fas fa-credit-card me-3 text-primary"></i>Thẻ tín dụng/ghi nợ</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 mb-3 mb-md-0 text-center">
+                                        <img src="payment/credit-card-illustration.jpg" alt="Thanh toán thẻ" class="img-fluid rounded" style="max-height: 200px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5>Thanh toán qua thẻ tín dụng/ghi nợ quốc tế</h5>
+                                        <p>Quý khách có thể thanh toán trực tuyến bằng thẻ tín dụng hoặc thẻ ghi nợ quốc tế. KidZone chấp nhận các loại thẻ phổ biến như Visa, Mastercard, JCB và American Express.</p>
+                                        
+                                        <div class="card-logos mt-3 text-center">
+                                            <img src="payment/visa.png" alt="Visa" height="40" class="mx-2">
+                                            <img src="payment/mastercard.png" alt="Mastercard" height="40" class="mx-2">
+                                            <img src="payment/jcb.png" alt="JCB" height="40" class="mx-2">
+                                            <img src="payment/amex.png" alt="American Express" height="40" class="mx-2">
+                                        </div>
+                                        
+                                        <h6 class="mt-4">Các bước thanh toán:</h6>
+                                        <ol>
+                                            <li>Chọn sản phẩm và thêm vào giỏ hàng</li>
+                                            <li>Tiến hành thanh toán và chọn phương thức "Thẻ tín dụng/ghi nợ"</li>
+                                            <li>Nhập thông tin thẻ (số thẻ, ngày hết hạn, mã CVV/CVC)</li>
+                                            <li>Xác thực giao dịch (có thể qua OTP gửi đến số điện thoại đăng ký với ngân hàng)</li>
+                                            <li>Nhận xác nhận thanh toán thành công</li>
+                                        </ol>
+                                        
+                                        <div class="security-info mt-3 border-top pt-3">
+                                            <h6 class="text-primary"><i class="fas fa-lock me-2"></i>Bảo mật thông tin thẻ</h6>
+                                            <p>KidZone cam kết bảo mật tuyệt đối thông tin thẻ của quý khách. Chúng tôi sử dụng công nghệ mã hóa SSL 256-bit và tuân thủ tiêu chuẩn bảo mật PCI DSS để đảm bảo mọi giao dịch đều an toàn.</p>
+                                            <p>Hệ thống thanh toán của chúng tôi được cung cấp bởi các đối tác uy tín như OnePay, VNPay và Stripe - những đơn vị hàng đầu trong lĩnh vực thanh toán điện tử tại Việt Nam và quốc tế.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="300">
+                            <h3><i class="fas fa-wallet me-3 text-primary"></i>Ví điện tử</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="wallet-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="payment/momo-large.png" alt="MoMo" width="60" class="me-3">
+                                                <h5 class="mb-0">Ví MoMo</h5>
+                                            </div>
+                                            <p>Thanh toán nhanh chóng qua ví điện tử MoMo - một trong những ví điện tử phổ biến nhất tại Việt Nam.</p>
+                                            <div class="wallet-steps mt-3">
+                                                <h6>Hướng dẫn thanh toán:</h6>
+                                                <ol>
+                                                    <li>Chọn phương thức thanh toán "Ví MoMo" khi thanh toán</li>
+                                                    <li>Quét mã QR hiển thị trên màn hình bằng ứng dụng MoMo</li>
+                                                    <li>Xác nhận thanh toán trên ứng dụng MoMo</li>
+                                                    <li>Nhận xác nhận thanh toán thành công</li>
+                                                </ol>
+                                            </div>
+                                            <div class="wallet-promo mt-3 bg-light p-2 rounded">
+                                                <p class="mb-0"><i class="fas fa-gift text-danger me-2"></i>Ưu đãi đặc biệt: Giảm 5% (tối đa 100.000₫) khi thanh toán qua MoMo từ ngày 01/05 - 30/06/2023.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="wallet-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="payment/zalopay-large.png" alt="ZaloPay" width="60" class="me-3">
+                                                <h5 class="mb-0">Ví ZaloPay</h5>
+                                            </div>
+                                            <p>Thanh toán tiện lợi qua ví điện tử ZaloPay - tích hợp trên ứng dụng Zalo phổ biến.</p>
+                                            <div class="wallet-steps mt-3">
+                                                <h6>Hướng dẫn thanh toán:</h6>
+                                                <ol>
+                                                    <li>Chọn phương thức thanh toán "ZaloPay" khi thanh toán</li>
+                                                    <li>Quét mã QR hiển thị trên màn hình bằng ứng dụng ZaloPay</li>
+                                                    <li>Xác nhận thanh toán trên ứng dụng ZaloPay</li>
+                                                    <li>Nhận xác nhận thanh toán thành công</li>
+                                                </ol>
+                                            </div>
+                                            <div class="wallet-promo mt-3 bg-light p-2 rounded">
+                                                <p class="mb-0"><i class="fas fa-gift text-primary me-2"></i>Ưu đãi đặc biệt: Hoàn tiền 10% (tối đa 50.000₫) cho đơn hàng đầu tiên thanh toán qua ZaloPay.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="wallet-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="payment/vnpay-large.png" alt="VNPay" width="60" class="me-3">
+                                                <h5 class="mb-0">VNPay</h5>
+                                            </div>
+                                            <p>Thanh toán an toàn qua cổng thanh toán VNPay - kết nối với hầu hết các ngân hàng nội địa Việt Nam.</p>
+                                            <div class="wallet-steps mt-3">
+                                                <h6>Hướng dẫn thanh toán:</h6>
+                                                <ol>
+                                                    <li>Chọn phương thức thanh toán "VNPay" khi thanh toán</li>
+                                                    <li>Chọn ngân hàng của bạn từ danh sách</li>
+                                                    <li>Nhập thông tin và xác nhận thanh toán</li>
+                                                    <li>Nhận xác nhận thanh toán thành công</li>
+                                                </ol>
+                                            </div>
+                                            <div class="wallet-promo mt-3 bg-light p-2 rounded">
+                                                <p class="mb-0"><i class="fas fa-gift text-success me-2"></i>Ưu đãi đặc biệt: Giảm 30.000₫ cho đơn hàng từ 500.000₫ khi thanh toán qua VNPay-QR.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="wallet-card h-100 border rounded p-3">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="payment/shopeepay-large.png" alt="ShopeePay" width="60" class="me-3">
+                                                <h5 class="mb-0">ShopeePay</h5>
+                                            </div>
+                                            <p>Thanh toán nhanh chóng qua ShopeePay - ví điện tử tích hợp trên nền tảng thương mại điện tử Shopee.</p>
+                                            <div class="wallet-steps mt-3">
+                                                <h6>Hướng dẫn thanh toán:</h6>
+                                                <ol>
+                                                    <li>Chọn phương thức thanh toán "ShopeePay" khi thanh toán</li>
+                                                    <li>Đăng nhập vào tài khoản Shopee</li>
+                                                    <li>Xác nhận thanh toán qua ShopeePay</li>
+                                                    <li>Nhận xác nhận thanh toán thành công</li>
+                                                </ol>
+                                            </div>
+                                            <div class="wallet-promo mt-3 bg-light p-2 rounded">
+                                                <p class="mb-0"><i class="fas fa-gift text-warning me-2"></i>Ưu đãi đặc biệt: Giảm 15% (tối đa 50.000₫) cho đơn hàng từ 300.000₫ khi thanh toán qua ShopeePay.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="wallet-benefits mt-4 alert alert-success">
+                                    <h5><i class="fas fa-thumbs-up me-2"></i>Lợi ích khi thanh toán qua ví điện tử</h5>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Thanh toán nhanh chóng, chỉ trong vài giây</li>
+                                                <li>Không cần mang theo tiền mặt hoặc thẻ</li>
+                                                <li>Dễ dàng theo dõi lịch sử giao dịch</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Nhiều chương trình khuyến mãi, ưu đãi hấp dẫn</li>
+                                                <li>An toàn, bảo mật cao</li>
+                                                <li>Nhận xử lý đơn hàng nhanh hơn</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="400">
+                            <h3><i class="fas fa-percentage me-3 text-primary"></i>Trả góp 0% lãi suất</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 mb-3 mb-md-0 text-center">
+                                        <img src="payment/installment-illustration.jpg" alt="Trả góp" class="img-fluid rounded" style="max-height: 200px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5>Thanh toán trả góp 0% lãi suất</h5>
+                                        <p>KidZone hợp tác với nhiều ngân hàng để cung cấp dịch vụ trả góp 0% lãi suất, giúp quý khách dễ dàng sở hữu những sản phẩm đồ chơi cao cấp mà không gây áp lực tài chính.</p>
+                                        
+                                        <div class="installment-info mt-3">
+                                            <h6>Điều kiện áp dụng:</h6>
+                                            <ul>
+                                                <li>Áp dụng cho đơn hàng từ 3.000.000₫ trở lên</li>
+                                                <li>Khách hàng sở hữu thẻ tín dụng của các ngân hàng liên kết</li>
+                                                <li>Kỳ hạn trả góp: 3, 6, 9 hoặc 12 tháng tùy ngân hàng</li>
+                                                <li>Miễn phí chuyển đổi trả góp (một số ngân hàng có thể thu phí chuyển đổi)</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="installment-banks mt-3">
+                                            <h6>Ngân hàng hỗ trợ trả góp 0%:</h6>
+                                            <div class="bank-logos mt-2 d-flex flex-wrap">
+                                                <img src="payment/sacombank.png" alt="Sacombank" height="30" class="me-3 mb-2">
+                                                <img src="payment/vpbank.png" alt="VPBank" height="30" class="me-3 mb-2">
+                                                <img src="payment/hsbc.png" alt="HSBC" height="30" class="me-3 mb-2">
+                                                <img src="payment/scb.png" alt="SCB" height="30" class="me-3 mb-2">
+                                                <img src="payment/citibank.png" alt="Citibank" height="30" class="me-3 mb-2">
+                                                <img src="payment/fecredit.png" alt="FE Credit" height="30" class="me-3 mb-2">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="installment-example mt-4 border p-3 rounded">
+                                            <h6>Ví dụ:</h6>
+                                            <p>Với đơn hàng 6.000.000₫, trả góp 6 tháng:</p>
+                                            <ul>
+                                                <li>Thanh toán hàng tháng: 1.000.000₫/tháng</li>
+                                                <li>Tổng thanh toán sau 6 tháng: 6.000.000₫</li>
+                                                <li>Lãi suất: 0%</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="installment-process mt-3">
+                                            <h6>Quy trình đăng ký trả góp:</h6>
+                                            <ol>
+                                                <li>Chọn sản phẩm và thêm vào giỏ hàng</li>
+                                                <li>Chọn phương thức thanh toán "Trả góp qua thẻ tín dụng"</li>
+                                                <li>Chọn ngân hàng và kỳ hạn trả góp</li>
+                                                <li>Hoàn tất đơn hàng và thanh toán bằng thẻ tín dụng</li>
+                                                <li>Nhận xác nhận chuyển đổi trả góp thành công</li>
+                                            </ol>
+                                        </div>
+                                        
+                                        <div class="alert alert-warning mt-3">
+                                            <strong>Lưu ý:</strong> Chương trình trả góp tùy thuộc vào chính sách của từng ngân hàng và có thể thay đổi. Vui lòng liên hệ với nhân viên KidZone để biết thêm chi tiết.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-block mt-5" data-aos="fade-up" data-aos-delay="500">
+                            <h3><i class="fas fa-question-circle me-3 text-primary"></i>Câu hỏi thường gặp về thanh toán</h3>
+                            <div class="content-box p-4 bg-light rounded mt-3">
+                                <div class="accordion" id="paymentFAQ">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                                Phương thức thanh toán nào an toàn nhất?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#paymentFAQ">
+                                            <div class="accordion-body">
+                                                <p>Tất cả các phương thức thanh toán tại KidZone đều an toàn và bảo mật. Tuy nhiên, mỗi phương thức có ưu điểm riêng:</p>
+                                                <ul>
+                                                    <li><strong>Thanh toán khi nhận hàng (COD):</strong> An toàn nhất vì bạn chỉ thanh toán sau khi kiểm tra hàng</li>
+                                                    <li><strong>Chuyển khoản ngân hàng:</strong> An toàn và dễ theo dõi giao dịch</li>
+                                                    <li><strong>Thẻ tín dụng/ghi nợ:</strong> An toàn với bảo mật SSL và xác thực OTP</li>
+                                                    <li><strong>Ví điện tử:</strong> An toàn với xác thực hai lớp và mã hóa</li>
+                                                </ul>
+                                                <p>KidZone áp dụng các biện pháp bảo mật cao nhất cho mọi phương thức thanh toán, bao gồm mã hóa SSL 256-bit, tuân thủ tiêu chuẩn PCI DSS và không lưu trữ thông tin thẻ tín dụng của khách hàng.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                                Tôi có thể thay đổi phương thức thanh toán sau khi đặt hàng không?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#paymentFAQ">
+                                            <div class="accordion-body">
+                                                <p>Có, quý khách có thể thay đổi phương thức thanh toán trong vòng 2 giờ sau khi đặt hàng và trước khi đơn hàng được xử lý. Để thay đổi phương thức thanh toán, vui lòng:</p>
+                                                <ol>
+                                                    <li>Liên hệ ngay với bộ phận Chăm sóc Khách hàng qua hotline 028-1234-5678</li>
+                                                    <li>Cung cấp mã đơn hàng và thông tin liên hệ để xác minh</li>
+                                                    <li>Yêu cầu thay đổi phương thức thanh toán</li>
+                                                </ol>
+                                                <p>Lưu ý: Đối với đơn hàng đã được xử lý hoặc đã thanh toán, chúng tôi không thể thay đổi phương thức thanh toán.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                                Làm thế nào để tôi biết thanh toán của mình đã thành công?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#paymentFAQ">
+                                            <div class="accordion-body">
+                                                <p>Sau khi thanh toán thành công, quý khách sẽ nhận được xác nhận thanh toán qua nhiều kênh:</p>
+                                                <ul>
+                                                    <li><strong>Email xác nhận:</strong> KidZone sẽ gửi email xác nhận thanh toán với chi tiết đơn hàng</li>
+                                                    <li><strong>SMS:</strong> Tin nhắn xác nhận sẽ được gửi đến số điện thoại đã đăng ký</li>
+                                                    <li><strong>Thông báo từ ngân hàng/ví điện tử:</strong> Quý khách sẽ nhận được thông báo từ ngân hàng hoặc ứng dụng ví điện tử</li>
+                                                    <li><strong>Trạng thái đơn hàng:</strong> Trong tài khoản KidZone, trạng thái đơn hàng sẽ chuyển thành "Đã thanh toán"</li>
+                                                </ul>
+                                                <p>Nếu quý khách không nhận được xác nhận thanh toán trong vòng 24 giờ, vui lòng liên hệ với chúng tôi qua hotline 028-1234-5678 hoặc email payment@kidzone.vn.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingFour">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                                Tôi đã thanh toán nhưng đơn hàng vẫn hiển thị "Chưa thanh toán"?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#paymentFAQ">
+                                            <div class="accordion-body">
+                                                <p>Trong một số trường hợp, có thể có độ trễ trong việc cập nhật trạng thái thanh toán. Nếu quý khách đã thanh toán nhưng đơn hàng vẫn hiển thị "Chưa thanh toán", vui lòng thực hiện các bước sau:</p>
+                                                <ol>
+                                                    <li>Đợi khoảng 15-30 phút để hệ thống cập nhật</li>
+                                                    <li>Kiểm tra email và tin nhắn xác nhận thanh toán</li>
+                                                    <li>Kiểm tra tài khoản ngân hàng/ví điện tử để xác nhận tiền đã được trừ</li>
+                                                    <li>Liên hệ với bộ phận Chăm sóc Khách hàng qua hotline 028-1234-5678 và cung cấp:
+                                                        <ul>
+                                                            <li>Mã đơn hàng</li>
+                                                            <li>Phương thức thanh toán đã sử dụng</li>
+                                                            <li>Thời gian thanh toán</li>
+                                                            <li>Bằng chứng thanh toán (nếu có)</li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <p>Chúng tôi sẽ kiểm tra và cập nhật trạng thái đơn hàng trong thời gian sớm nhất.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faqHeadingFive">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                                Chính sách hoàn tiền như thế nào?
+                                            </button>
+                                        </h2>
+                                        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#paymentFAQ">
+                                            <div class="accordion-body">
+                                                <p>Chính sách hoàn tiền của KidZone phụ thuộc vào phương thức thanh toán ban đầu:</p>
+                                                <ul>
+                                                    <li><strong>Thanh toán khi nhận hàng (COD):</strong> Hoàn tiền trực tiếp nếu từ chối nhận hàng tại thời điểm giao hàng. Đối với trường hợp đổi/trả sau khi đã nhận hàng, chúng tôi sẽ hoàn tiền qua chuyển khoản ngân hàng.</li>
+                                                    <li><strong>Chuyển khoản ngân hàng:</strong> Hoàn tiền vào tài khoản ngân hàng của quý khách trong vòng 3-7 ngày làm việc.</li>
+                                                    <li><strong>Thẻ tín dụng/ghi nợ:</strong> Hoàn tiền vào thẻ đã sử dụng để thanh toán. Quá trình này có thể mất 7-15 ngày làm việc tùy theo chính sách của ngân hàng phát hành thẻ.</li>
+                                                    <li><strong>Ví điện tử:</strong> Hoàn tiền vào ví điện tử đã sử dụng để thanh toán trong vòng 3-5 ngày làm việc.</li>
+                                                </ul>
+                                                <p>Để biết thêm chi tiết về chính sách hoàn tiền, vui lòng tham khảo <a href="returns.html">Chính sách đổi trả</a> của chúng tôi.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-security mt-5 p-4 bg-light rounded" data-aos="fade-up">
+                            <h3 class="text-center mb-4"><i class="fas fa-shield-alt me-2 text-primary"></i>Cam kết bảo mật thanh toán</h3>
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                                    <img src="payment/security-badge.png" alt="Payment security" class="img-fluid" style="max-height: 200px;">
+                                </div>
+                                <div class="col-lg-8">
+                                    <p>KidZone cam kết bảo mật tuyệt đối thông tin thanh toán của khách hàng thông qua các biện pháp bảo mật tiên tiến:</p>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="security-item d-flex">
+                                                <div class="security-icon me-3 text-primary">
+                                                    <i class="fas fa-lock fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Mã hóa SSL 256-bit</h5>
+                                                    <p>Bảo vệ thông tin thanh toán trong quá trình truyền tải dữ liệu</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="security-item d-flex">
+                                                <div class="security-icon me-3 text-primary">
+                                                    <i class="fas fa-shield-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Tiêu chuẩn PCI DSS</h5>
+                                                    <p>Tuân thủ tiêu chuẩn bảo mật quốc tế cao nhất cho thanh toán thẻ</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="security-item d-flex">
+                                                <div class="security-icon me-3 text-primary">
+                                                    <i class="fas fa-fingerprint fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Xác thực hai lớp</h5>
+                                                    <p>Áp dụng xác thực OTP cho mọi giao dịch thanh toán trực tuyến</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="security-item d-flex">
+                                                <div class="security-icon me-3 text-primary">
+                                                    <i class="fas fa-user-shield fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Không lưu trữ thông tin thẻ</h5>
+                                                    <p>Chúng tôi không lưu trữ thông tin thẻ tín dụng của khách hàng</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="security-partners mt-3 text-center">
+                                        <p>Đối tác bảo mật thanh toán:</p>
+                                        <img src="payment/security/norton.png" alt="Norton" height="40" class="mx-2">
+                                        <img src="payment/security/mcafee.png" alt="McAfee" height="40" class="mx-2">
+                                        <img src="payment/security/visa-secure.png" alt="Visa Secure" height="40" class="mx-2">
+                                        <img src="payment/security/mastercard-securecode.png" alt="Mastercard SecureCode" height="40" class="mx-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-support mt-5 text-center p-4 bg-primary rounded text-white" data-aos="fade-up">
+                            <h3>Cần hỗ trợ về thanh toán?</h3>
+                            <p>Đội ngũ Chăm sóc Khách hàng của chúng tôi luôn sẵn sàng giúp đỡ bạn</p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="tel:02812345678" class="btn btn-light me-2"><i class="fas fa-phone-alt me-2"></i>028-1234-5678</a>
+                                <a href="mailto:payment@kidzone.vn" class="btn btn-outline-light"><i class="fas fa-envelope me-2"></i>payment@kidzone.vn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-logo">
+                        <h2>Kid<span>Zone</span></h2>
+                    </div>
+                    <p class="mb-4">KidZone - Cung cấp đồ chơi an toàn, giáo dục và thú vị cho sự phát triển toàn diện của trẻ em.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="mb-0">123 Nguyễn Văn A, Quận 1, TP.HCM</p>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-phone-alt"></i>
+                            <p class="mb-0">028-1234-5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="mb-0">info@kidzone.vn</p>
+                        </div>
+                    </div>
+                    <div class="footer-social mt-4">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Danh mục</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="category-educational.html">Đồ chơi giáo dục</a></li>
+                        <li><a href="category-active.html">Đồ chơi vận động</a></li>
+                        <li><a href="category-creative.html">Đồ chơi sáng tạo</a></li>
+                        <li><a href="category-building.html">Đồ chơi xếp hình</a></li>
+                        <li><a href="category-boys.html">Đồ chơi cho bé trai</a></li>
+                        <li><a href="category-girls.html">Đồ chơi cho bé gái</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Liên kết</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="promotion.html">Khuyến mãi</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="checkout.html">Đặt hàng</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-heading">Hỗ trợ khách hàng</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="guide.html">Hướng dẫn mua hàng</a></li>
+                        <li><a href="shipping.html">Chính sách vận chuyển</a></li>
+                        <li><a href="returns.html">Chính sách đổi trả</a></li>
+                        <li><a href="warranty.html">Chính sách bảo hành</a></li>
+                        <li><a href="payment.html">Phương thức thanh toán</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 mt-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">© 2023 KidZone. Tất cả quyền được bảo lưu.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <div class="payment-methods">
+                            <span>Chấp nhận thanh toán:</span>
+                            <img src="payment/visa.png" alt="Visa">
+                            <img src="payment/mastercard.png" alt="Mastercard">
+                            <img src="payment/momo.png" alt="MoMo">
+                            <img src="payment/zalopay.png" alt="ZaloPay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Nhập email của bạn">
+                            <div class="invalid-feedback" id="errorLoginEmail"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu">
+                            <div class="invalid-feedback" id="errorLoginPassword"></div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="btnLogin">Đăng nhập</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Quên mật khẩu?</a>
+                    </div>
+                    <div class="social-login mt-4">
+                        <p class="text-center mb-3">Hoặc đăng nhập với</p>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-outline-primary me-2"><i class="fab fa-facebook-f me-2"></i>Facebook</button>
+                            <button class="btn btn-outline-danger"><i class="fab fa-google me-2"></i>Google</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Chưa có tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Đăng ký tài khoản</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Họ tên</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="Nhập họ tên của bạn">
+                            <div class="invalid-feedback" id="errorRegisterName"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Nhập email của bạn">
+                            <div class="invalid-feedback" id="errorRegisterEmail"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPhone" class="form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" id="registerPhone" placeholder="Nhập số điện thoại">
+                            <div class="invalid-feedback" id="errorRegisterPhone"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Nhập mật khẩu">
+                            <div class="invalid-feedback" id="errorRegisterPassword"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Nhập lại mật khẩu">
+                            <div class="invalid-feedback" id="errorRegisterConfirmPassword"></div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms">
+                            <label class="form-check-label" for="agreeTerms">Tôi đồng ý với các <a href="terms.html">điều khoản</a> và <a href="privacy.html">chính sách bảo mật</a></label>
+                            <div class="text-danger small" id="errorAgree"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="btnRegister">Đăng ký</button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Đã có tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Find Store Modal -->
+    <div class="modal fade" id="findStoreModal" tabindex="-1" aria-labelledby="findStoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="findStoreModalLabel">Tìm cửa hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="form-group">
+                                <label for="storeCity" class="form-label">Tỉnh/Thành phố</label>
+                                <select class="form-select" id="storeCity">
+                                    <option value="">Chọn tỉnh/thành phố</option>
+                                    <option value="hcm">TP. Hồ Chí Minh</option>
+                                    <option value="hanoi">Hà Nội</option>
+                                    <option value="danang">Đà Nẵng</option>
+                                    <option value="cantho">Cần Thơ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="storeDistrict" class="form-label">Quận/Huyện</label>
+                                <select class="form-select" id="storeDistrict">
+                                    <option value="">Chọn quận/huyện</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="storeMap" style="width: 100%; height: 400px; border-radius: 10px;"></div>
+                    <div class="store-list mt-4">
+                        <h6>Danh sách cửa hàng:</h6>
+                        <div class="store-item p-3 border rounded mb-2">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="mb-1">KidZone Nguyễn Văn A</h5>
+                                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>123 Nguyễn Văn A, Quận 1, TP.HCM</p>
+                                    <p class="mb-1"><i class="fas fa-phone-alt me-2"></i>028-1234-5678</p>
+                                    <p class="mb-0"><i class="fas fa-clock me-2"></i>8:00 - 20:00 (Thứ 2 - Chủ nhật)</p>
+                                </div>
+                                <button class="btn btn-primary align-self-center view-on-map" data-lat="10.7769" data-lng="106.7009">Xem trên bản đồ</button>
+                            </div>
+                        </div>
+                        <div class="store-item p-3 border rounded mb-2">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="mb-1">KidZone Nguyễn Văn B</h5>
+                                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>456 Nguyễn Văn B, Quận 3, TP.HCM</p>
+                                    <p class="mb-1"><i class="fas fa-phone-alt me-2"></i>028-8765-4321</p>
+                                    <p class="mb-0"><i class="fas fa-clock me-2"></i>8:00 - 20:00 (Thứ 2 - Chủ nhật)</p>
+                                </div>
+                                <button class="btn btn-primary align-self-center view-on-map" data-lat="10.7868" data-lng="106.6830">Xem trên bản đồ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Check Modal -->
+    <div class="modal fade" id="orderCheckModal" tabindex="-1" aria-labelledby="orderCheckModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderCheckModalLabel">Kiểm tra đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderCheckForm">
+                        <div class="mb-3">
+                            <label for="orderNumber" class="form-label">Mã đơn hàng</label>
+                            <input type="text" class="form-control" id="orderNumber" placeholder="Ví dụ: KZ12345">
+                            <div class="invalid-feedback" id="errorOrderNumber"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderEmail" class="form-label">Email đặt hàng</label>
+                            <input type="email" class="form-control" id="orderEmail" placeholder="Nhập email bạn đã dùng để đặt hàng">
+                            <div class="invalid-feedback" id="errorOrderEmail"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" id="btnCheckOrder">Kiểm tra</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Điều khoản và điều kiện</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>1. Điều khoản chung</h4>
+                    <p>Khi sử dụng dịch vụ của KidZone, bạn đồng ý tuân theo các điều khoản và điều kiện được quy định.</p>
+                    
+                    <h4>2. Sản phẩm và giá cả</h4>
+                    <p>KidZone cam kết cung cấp thông tin chính xác về sản phẩm và giá cả. Tuy nhiên, có thể có sai sót về thông tin sản phẩm, giá cả hoặc khuyến mãi.</p>
+                    
+                    <h4>3. Đặt hàng và thanh toán</h4>
+                    <p>Khi đặt hàng, khách hàng phải cung cấp thông tin chính xác và đầy đủ. KidZone chấp nhận nhiều phương thức thanh toán khác nhau.</p>
+                    
+                    <h4>4. Giao hàng và đổi trả</h4>
+                    <p>KidZone sẽ giao hàng trong thời gian cam kết. Khách hàng có quyền đổi trả trong vòng 7 ngày nếu sản phẩm có lỗi.</p>
+                    
+                    <h4>5. Bảo mật thông tin</h4>
+                    <p>KidZone cam kết bảo vệ thông tin cá nhân của khách hàng theo chính sách bảo mật của công ty.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickViewModalLabel">Xem nhanh sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <img src="products/product-1.jpg" alt="Product" id="quickViewImage" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="quickViewTitle">Bộ xếp hình thông minh</h3>
+                            <div class="product-rating mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(28)</span>
+                            </div>
+                            <div class="product-price mb-3">
+                                <span class="old-price" id="quickViewOldPrice">420.000₫</span>
+                                <span class="new-price" id="quickViewPrice">350.000₫</span>
+                            </div>
+                            <p class="mb-4">Bộ xếp hình thông minh giúp phát triển tư duy logic và sáng tạo cho bé từ 3-6 tuổi. Bộ sản phẩm bao gồm 100 chi tiết với nhiều hình dạng và màu sắc khác nhau.</p>
+                            <div class="product-meta mb-4">
+                                <p><strong>Mã sản phẩm:</strong> KZ-XH-001</p>
+                                <p><strong>Danh mục:</strong> Đồ chơi giáo dục</p>
+                                <p><strong>Độ tuổi phù hợp:</strong> 3-6 tuổi</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="input-group me-3" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary" type="button" id="decreaseQtyModal"><i class="fas fa-minus"></i></button>
+                                    <input type="number" class="form-control text-center" id="quantityModal" value="1" min="1">
+                                    <button class="btn btn-outline-secondary" type="button" id="increaseQtyModal"><i class="fas fa-plus"></i></button>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-labelledby="orderSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-5">
+                    <i class="fas fa-check-circle success-icon mb-4"></i>
+                    <h3 class="mb-3">Đặt hàng thành công!</h3>
+                    <p class="mb-4">Cảm ơn bạn đã đặt hàng tại KidZone!</p>
+                    <h5 class="mb-4">Mã đơn hàng của bạn là: <span id="orderNumberDisplay" class="text-primary">KZ12345</span></h5>
+                    <p>Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <a href="products.html" class="btn btn-primary">Tiếp tục mua sắm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="file.js"></script>
+</body>
+</html>
