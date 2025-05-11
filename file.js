@@ -1,8 +1,10 @@
+
 /**
  * KidZone - Main JavaScript File
  * Features:
  * - jQuery countdown timer
  * - User authentication with localStorage
+ * - Newsletter subscription with localStorage
  * - Product management
  * - Form validations
  * - Interactive UI components
@@ -161,6 +163,30 @@ $(document).ready(function() {
                 const orders = this.getAll();
                 return orders.find(o => o.orderNumber === orderNumber);
             }
+        },
+        
+        // Newsletter subscribers management
+        newsletter: {
+            // Save subscriber info
+            saveSubscriber: function(email, password) {
+                localStorage.setItem('kidzone_email', email);
+                localStorage.setItem('kidzone_password', password);
+                return true;
+            },
+            
+            // Get subscriber info
+            getSubscriber: function() {
+                return {
+                    email: localStorage.getItem('kidzone_email'),
+                    password: localStorage.getItem('kidzone_password')
+                };
+            },
+            
+            // Remove subscriber info
+            removeSubscriber: function() {
+                localStorage.removeItem('kidzone_email');
+                localStorage.removeItem('kidzone_password');
+            }
         }
     };
     
@@ -209,6 +235,114 @@ $(document).ready(function() {
     
     // Call update cart count on page load
     updateCartCount();
+    
+    // ------------------------------------------------
+    // NEWSLETTER/LOGIN FUNCTIONALITY
+    // ------------------------------------------------
+    function handleNewsletterForm() {
+        // Sửa đổi cấu trúc newsletter form nếu chưa có các trường cần thiết
+        const newsletterForm = $('.newsletter-form');
+        if (newsletterForm.length && !$('#newsletterEmail').length) {
+            const originalContent = newsletterForm.html();
+            newsletterForm.html(`
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" id="newsletterEmail" placeholder="Nhập địa chỉ email của bạn" required>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" id="newsletterPassword" placeholder="Nhập mật khẩu của bạn" required>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="form-check mb-0">
+                        <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                        <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                    </div>
+                    <button class="btn btn-primary" type="submit" id="newsletterSubmit">Đăng ký</button>
+                </div>
+                <div id="loginMessage" class="mt-2 text-success d-none"></div>
+            `);
+        }
+
+        const emailInput = $('#newsletterEmail');
+        const passwordInput = $('#newsletterPassword');
+        const rememberCheckbox = $('#rememberMe');
+        const loginMessage = $('#loginMessage');
+
+        // Tự động điền thông tin đăng nhập đã lưu
+        const savedInfo = DB.newsletter.getSubscriber();
+        if (savedInfo.email && savedInfo.password) {
+            emailInput.val(savedInfo.email);
+            passwordInput.val(savedInfo.password);
+            showLoginMessage("Đã tự động điền thông tin đăng nhập", "info");
+        }
+
+        // Xử lý sự kiện submit form
+        newsletterForm.on('submit', function(event) {
+            event.preventDefault();
+            
+            const email = emailInput.val().trim();
+            const password = passwordInput.val().trim();
+            
+            // Kiểm tra email và mật khẩu đơn giản
+            if (email === '') {
+                showLoginMessage("Vui lòng nhập email", "error");
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                showLoginMessage("Email không hợp lệ", "error");
+                return;
+            }
+            
+            if (password === '') {
+                showLoginMessage("Vui lòng nhập mật khẩu", "error");
+                return;
+            }
+            
+            if (password.length < 6) {
+                showLoginMessage("Mật khẩu phải có ít nhất 6 ký tự", "error");
+                return;
+            }
+            
+            // Lưu thông tin đăng nhập nếu checkbox được chọn
+            if (rememberCheckbox.is(':checked')) {
+                DB.newsletter.saveSubscriber(email, password);
+                showLoginMessage("Đăng ký thành công! Thông tin đăng nhập đã được lưu.", "success");
+            } else {
+                // Xóa thông tin đã lưu nếu không chọn "Ghi nhớ đăng nhập"
+                DB.newsletter.removeSubscriber();
+                showLoginMessage("Đăng ký thành công! Thông tin đăng nhập không được lưu.", "success");
+            }
+            
+            // Reset form sau khi đăng ký thành công nếu không lưu thông tin
+            if (!rememberCheckbox.is(':checked')) {
+                $(this)[0].reset();
+            }
+        });
+
+        // Hiển thị thông báo
+        function showLoginMessage(message, type) {
+            loginMessage.text(message);
+            loginMessage.removeClass('d-none text-success text-danger text-info');
+            
+            switch(type) {
+                case 'success':
+                    loginMessage.addClass('text-success');
+                    break;
+                case 'error':
+                    loginMessage.addClass('text-danger');
+                    break;
+                case 'info':
+                    loginMessage.addClass('text-info');
+                    break;
+            }
+        }
+    }
+
+    // Kiểm tra email hợp lệ
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
     
     // ------------------------------------------------
     // JQUERY COUNTDOWN FUNCTIONALITY
@@ -661,7 +795,29 @@ $(document).ready(function() {
         }
         
         if (isValid) {
-            // Attempt to authenticate user
+            // Kiểm tra xem có phải là người dùng đã đăng ký newsletter không
+            const savedInfo = DB.newsletter.getSubscriber();
+            if (savedInfo.email === email && savedInfo.password === password) {
+                showNotification('Đăng nhập thành công từ tài khoản newsletter!', 'success');
+                $('#loginModal').modal('hide');
+                resetForm('loginForm');
+                
+                // Lưu thông tin người dùng newsletter vào session
+                sessionStorage.setItem('kidzone_current_user', JSON.stringify({
+                    name: 'Khách hàng',
+                    email: email,
+                    isLoggedIn: true
+                }));
+                
+                // Reload page to update UI based on login status
+                setTimeout(function() {
+                    location.reload();
+                }, 1000);
+                
+                return;
+            }
+            
+            // Nếu không phải, thử đăng nhập từ database người dùng
             const result = DB.users.authenticate(email, password);
             if (result.success) {
                 showNotification('Đăng nhập thành công!', 'success');
@@ -743,6 +899,13 @@ $(document).ready(function() {
         }
         
         if (isValid) {
+            // Kiểm tra xem email đã được sử dụng trong newsletter chưa
+            const savedInfo = DB.newsletter.getSubscriber();
+            if (savedInfo.email === email) {
+                showError('registerEmail', 'Email này đã được sử dụng cho đăng ký newsletter.');
+                return;
+            }
+            
             // Add user to database
             const result = DB.users.add({
                 name: name,
@@ -992,26 +1155,6 @@ $(document).ready(function() {
         }
     });
     
-    // Newsletter subscription
-    $('.newsletter-form button').on('click', function() {
-        const email = $('.newsletter-form input').val().trim();
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        
-        if (!email) {
-            $('.newsletter-form input').addClass('is-invalid');
-            return;
-        }
-        
-        if (!emailRegex.test(email)) {
-            $('.newsletter-form input').addClass('is-invalid');
-            return;
-        }
-        
-        $('.newsletter-form input').removeClass('is-invalid');
-        showNotification('Cảm ơn bạn đã đăng ký nhận thông tin từ KidZone!', 'success');
-        $('.newsletter-form input').val('');
-    });
-    
     // ------------------------------------------------
     // GOOGLE MAPS INTEGRATION
     // ------------------------------------------------
@@ -1247,10 +1390,24 @@ $(document).ready(function() {
         });
     }
     
+    // ------------------------------------------------
+    // INITIALIZE ALL APP FEATURES
+    // ------------------------------------------------
+    function initializeApp() {
+        // Initialize newsletter form handler
+        handleNewsletterForm();
+        
+        // Initialize other features
+        // ...
+    }
+    
     // Initialize AOS on window load to ensure proper calculations
     $(window).on('load', function() {
         if (typeof AOS !== 'undefined') {
             AOS.refresh();
         }
+        
+        // Initialize all app features
+        initializeApp();
     });
 });
